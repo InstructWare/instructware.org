@@ -1,0 +1,69 @@
+# Page: Home (`/`)
+
+## Layout Tree
+- Sticky top navigation:
+  - Include `views/components/top_navbar.md`
+- Hero section:
+  - Headline (locale-aware):
+    - [text] zh: 超越静态软件
+    - [text] en: Beyond Static Software
+  - Subheadline:
+    - [text] zh: 把人类指令编译为可治理、可验证、可追溯的运行时行为。
+    - [text] en: Compile human instruction into governed, verifiable, source-traceable runtime behavior.
+  - [text] Primary CTA button: Read Manifesto
+  - [text] Secondary CTA button: Read IWP Protocol
+  - [text] Tertiary CTA button: View on GitHub
+  - [text] Tooling link (locale-aware):
+    - [text] zh: 工具链：iwp-tools
+    - [text] en: Tooling: iwp-tools
+- Paradigm shift section:
+  - Two-column comparison:
+    - [text] left: Legacy software model (release-bound change cycles, pre-fixed interfaces and workflows, code as primary change entry)
+    - [text] right: InstructWare model (human instruction-driven continuous iteration, runtime-generated and adaptive interfaces, governed continuous evolution)
+- Three laws section:
+  - [text] Card 1: Natural Language as the Primary Intent Source
+  - [text] Card 2: Dynamic, Adaptive, and Governable Interfaces
+  - [text] Card 3: Continuously Evolvable and Governable Runtime
+- IWP essence section:
+  - Key points from protocol:
+    - [text] Instruction -> Intent -> Execution
+    - [text] `.iw` as intent-layer SSOT
+    - [text] `.iwc` and diagnostics ensure source traceability
+- Values section:
+  - [text] Human Instruction as the contract over code as the bottleneck.
+  - [text] Instruction-to-Execution pipelines over release-bound feature queues.
+  - [text] Source-traceable runtime evolution over opaque one-shot deployments.
+  - [text] Governed machine adaptation to human goals over humans adapting to machine constraints.
+- Final CTA section:
+  - Message:
+    - [text] zh: 以文档定义意图，在运行时验证并持续演进。
+    - [text] en: Define intent in docs, verify it at runtime, and evolve continuously.
+  - Button group:
+    - [text] Open Manifesto
+    - [text] Open Protocol
+    - [text] Open Docs Hub
+- Footer metadata section:
+  - [text] Copyright: © 2026 InstructWare / DawnChat Core Team
+  - [text] Content License: CC BY-ND 4.0
+  - [text] Protocol Status: IWP v1.0 Draft (Pre-Launch)
+  - [text] Source Code: GitHub repository link
+
+## Display Rules
+- Home page MUST include exactly one global top navigation instance.
+- Home page MUST NOT render any additional theme or language controls outside top navigation.
+- Main content MUST align horizontally with top navigation container width.
+- Home page MUST present clear visual hierarchy for whitepaper reading:
+  - hero title > section title > card title > body text.
+- Home page copy and section labels MUST be locale-aware.
+- Home section copy SHOULD align with extraction constraints in `models/content/home_content.md`.
+- Home sections SHOULD use generous vertical spacing and restrained color palette.
+- Key sections (`Three laws`, `IWP essence`, `Values`) SHOULD be presented as concise cards for fast scanning.
+- Final CTA section SHOULD be visually emphasized as a conclusion block.
+
+## Interaction Hooks
+- "Read Manifesto" delegates to `logic/docs/on_open_doc.md` with `doc_id=manifesto`.
+- "Read IWP Protocol" delegates to `logic/docs/on_open_doc.md` with `doc_id=protocol`.
+- "Open Docs Center" navigates to `/docs`.
+- "View on GitHub" opens `https://github.com/InstructWare/instructware.org`.
+- "Tooling: iwp-tools" opens `https://github.com/InstructWare/iwp-tools`.
+- "Content License" opens `https://github.com/InstructWare/instructware.org/blob/main/whitepaper/LICENSE-CC-BY-ND`.

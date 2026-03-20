@@ -1,0 +1,36 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  lint-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install iwp-tools
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "instructware-tools>=0.1.0" || \
+            python -m pip install "git+https://github.com/InstructWare/iwp-tools.git"
+      - name: Build IWC sidecar
+        run: iwp-lint nodes compile --config .iwp-lint.yaml
+      - name: Ensure committed IWC sidecar is up to date
+        run: |
+          if [ -n "$(git status --porcelain -- .iwp/compiled)" ]; then
+            echo "Detected stale or missing committed .iwc artifacts under .iwp/compiled."
+            echo "Run: iwp-lint nodes compile --config .iwp-lint.yaml"
+            echo "Then commit the updated .iwc files."
+            git status --porcelain -- .iwp/compiled
+            exit 1
+          fi
+      - name: Verify IWC sidecar
+        run: iwp-lint nodes verify-compiled --config .iwp-lint.yaml

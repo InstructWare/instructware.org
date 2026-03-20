@@ -1,0 +1,15 @@
+version: 1.0.0
+name: InstructWareWeb
+description: Official website for InstructWare.org based on IWP natural language source bundle
+
+targets:
+  - web
+  - desktop
+
+permissions:
+  - fs:read
+  - network:none
+
+requires:
+  - plugin: markdown_renderer
+  - plugin: local_storage

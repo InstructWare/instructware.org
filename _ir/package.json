@@ -1,0 +1,30 @@
+{
+  "name": "_ir",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit -p tsconfig.json",
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "markdown-it": "^14.1.0",
+    "mermaid": "^11.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.0",
+    "jsdom": "^29.0.0",
+    "typescript": "^5.9.3",
+    "vitepress": "^1.6.4",
+    "vitest": "^4.1.0",
+    "vue": "^3.5.30"
+  }
+}
