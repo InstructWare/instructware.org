@@ -80,9 +80,9 @@ coverage_profiles:
       - views.pages.display_rules
     anchor_levels:
       - structure
-    node_linked_min: 65
+    node_linked_min: 40
     critical_linked_min: 100
-    missing_severity: warning
+    missing_severity: error
 
   - name: views_text
     file_type_ids:
@@ -132,10 +132,14 @@ execution_presets:
       markdown_excerpt_max_chars: 240
       include_baseline_gaps: true
       max_gap_items: 20
-      format: text
+      format: both
+      json: out/session-diff.json
     session_reconcile:
-      format: text
+      node_severity: error
+      format: both
+      json: out/session-reconcile.json
       max_diagnostics: 20
+      min_severity: error
       suggest_fixes: true
     session_commit:
       evidence_json: out/session-evidence.json

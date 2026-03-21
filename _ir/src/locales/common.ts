@@ -78,6 +78,34 @@ export const COMMON_TEXTS: Record<string, Record<string, Record<Locale, string>>
       "zh-CN": "工具链：iwp-tools",
       "en-US": "Tooling: iwp-tools",
     },
+    // @iwp.link locales/common.en-US.md::n.1c96
+    // @iwp.link locales/common.zh-CN.md::n.2975
+    sectionVision: {
+      "zh-CN": "长期愿景",
+      "en-US": "Long-Term Vision",
+    },
+    // @iwp.link locales/common.en-US.md::n.0b51
+    // @iwp.link locales/common.zh-CN.md::n.0ec1
+    visionLead: {
+      "zh-CN": "在 AI 时代，自然语言正走向主流的编程接口。",
+      "en-US":
+        "In the AI era, natural language is becoming a mainstream programming interface.",
+    },
+    // @iwp.link locales/common.en-US.md::n.f679
+    // @iwp.link locales/common.zh-CN.md::n.b37e
+    visionBody: {
+      "zh-CN":
+        "InstructWare 的长期目标，是把以自然语言为核心的编程方式沉淀为可治理、可验证、可持续演进的工程现实。",
+      "en-US":
+        "InstructWare's long-term goal is to turn natural-language-first programming into an engineering reality that is governable, verifiable, and continuously evolvable.",
+    },
+    // @iwp.link locales/common.en-US.md::n.2598
+    // @iwp.link locales/common.zh-CN.md::n.d13b
+    visionFootnote: {
+      "zh-CN": "传统语言仍将长期存在，并在执行层持续发挥关键作用。",
+      "en-US":
+        "Traditional languages will remain essential and continue to play a key role at the execution layer.",
+    },
     // @iwp.link locales/common.en-US.md::n.0995
     // @iwp.link locales/common.zh-CN.md::n.3da6
     tagline: {

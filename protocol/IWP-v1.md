@@ -125,6 +125,28 @@ AppName.iw/
 
 `dependency.md` is optional and intended for teams that need explicit dependency governance constraints.
 
+Multi-target note:
+
+- A package **MAY** declare multiple runtime targets (for example `web`, `desktop`, `android`, `ios`, `backend`).
+- For multi-target projects, implementations **SHOULD** use a shared-first topology with target overlays to minimize duplicated intent documents.
+
+Recommended overlay topology (optional):
+
+```text
+AppName.iw/
+├── views/
+│   ├── shared/
+│   ├── web/
+│   ├── android/
+│   └── ios/
+├── logic/
+│   ├── shared/
+│   └── backend/
+└── state/
+    ├── shared/
+    └── mobile/
+```
+
 ---
 
 ## 6. Intent Layer Specifications
@@ -161,6 +183,8 @@ AppName.iw/
 Requirements:
 - `requires` **MUST** declare capability-level plugin identifiers, not concrete third-party package names.
 - `permissions` **MUST** be explicit and deny-by-default when omitted.
+- `targets` **MAY** declare one or more runtime targets.
+- When multiple targets are declared, implementations **MUST** document target resolution precedence (for example `shared -> <target>` override).
 - Implementations **MUST** validate unknown top-level keys according to profile mode (strict or permissive mode is implementation-defined but must be documented).
 
 Example:
@@ -362,6 +386,7 @@ Minimum requirements:
 ## 13. Enterprise Profile (Optional)
 
 For large multi-domain systems, implementations **MAY** provide a feature-first layout profile on top of baseline topology.
+This profile **MAY** also be applied to multi-target projects, using shared assets plus target-specific overlays where needed.
 
 Reference topology:
 

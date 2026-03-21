@@ -34,6 +34,13 @@
   - [text] Instruction-to-Execution pipelines over release-bound feature queues.
   - [text] Source-traceable runtime evolution over opaque one-shot deployments.
   - [text] Governed machine adaptation to human goals over humans adapting to machine constraints.
+- Long-term vision section:
+  - [text] zh: 自然语言正走向主流的编程接口。
+  - [text] en: Natural language is becoming a mainstream programming interface.
+  - [text] zh: InstructWare 的长期目标，是把“自然编程”沉淀为可治理、可验证、可持续演进的工程现实。
+  - [text] en: InstructWare's long-term goal is to turn natural programming into an engineering reality that is governable, verifiable, and continuously evolvable.
+  - [text] zh: 传统语言仍将长期存在，并在执行层持续发挥关键作用。
+  - [text] en: Traditional languages will remain essential and continue to play a key role at the execution layer.
 - Final CTA section:
   - Message:
     - [text] zh: 以文档定义意图，在运行时验证并持续演进。

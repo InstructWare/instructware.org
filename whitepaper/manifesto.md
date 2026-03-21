@@ -57,6 +57,7 @@ The objective is not arbitrary UI change. The objective is controlled adaptabili
 
 ### Law III: Continuously Evolvable Runtime
 InstructWare is operated as an evolving runtime rather than a one-time shipped artifact. When capabilities are missing or behavior is incorrect, the system can iterate through guarded update loops to repair or extend functionality.
+In practice, this often runs on agent runtimes that can repair and evolve software within human-defined guardrails.
 
 Reliability comes from bounded self-repair, auditability, testing, and rollback strategies, not from claiming perfect autonomy.
 In practice, bounded evolution follows an explicit control loop: propose -> diff -> verify -> approve -> apply -> monitor -> rollback.
@@ -73,6 +74,8 @@ We propose the following priorities for the InstructWare era:
 - **Governed machine adaptation to human goals** over humans adapting to machine constraints.
 
 These values do not reject software engineering fundamentals. They re-center them around intent, verification, and long-term maintainability.
+
+We believe that, in the AI era, natural language is becoming a mainstream programming interface. InstructWare's long-term goal is to turn natural-language-first programming into an engineering reality that is governable, verifiable, and continuously evolvable. Traditional languages will remain essential and continue to play a key role at the execution layer.
 
 ---
 

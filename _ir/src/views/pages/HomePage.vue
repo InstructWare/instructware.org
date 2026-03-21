@@ -193,6 +193,18 @@ function splitContrast(text: string): ContrastPart[] {
       </article>
     </section>
 
+    <!-- @iwp.link views/pages/home.md::n.fddd -->
+    <section class="iwp-home-section">
+      <article class="iwp-card iwp-hover-card">
+        <h2 class="iwp-section-title">{{ t("home", "sectionVision") }}</h2>
+        <ul class="iwp-list-clean">
+          <li>{{ t("home", "visionLead") }}</li>
+          <li>{{ t("home", "visionBody") }}</li>
+          <li>{{ t("home", "visionFootnote") }}</li>
+        </ul>
+      </article>
+    </section>
+
     <!-- @iwp.link views/pages/home.md::n.11b4 -->
     <!-- @iwp.link views/pages/home.md::n.a327 -->
     <section class="iwp-card iwp-final-cta iwp-hover-card">
