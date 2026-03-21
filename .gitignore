@@ -24,7 +24,6 @@
 
 # Exclude generated/development artifacts even inside allowed trees.
 _ir/node_modules/
-_ir/package-lock.json
 _ir/.vitepress/cache
 _ir/.vitepress/dist
 .iwp/
