@@ -4,11 +4,10 @@
 
 import { useRouter } from "vitepress";
 import { useIwpState } from "../../logic/store/useIwpState";
-import githubIcon from "../../assets/icons/github-invertocat-black.png";
 
 const router = useRouter();
-// @iwp.link views/pages/home.md::n.b94b
 // @iwp.link views/pages/home.md::n.8639
+// @iwp.link views/pages/home.md::n.b94b
 const { openDoc, t } = useIwpState();
 
 // @iwp.link views/pages/home.md::n.2dbb
@@ -19,11 +18,6 @@ function onReadManifesto() {
 // @iwp.link views/pages/home.md::n.9618
 function onReadProtocol() {
   openDoc("protocol", router);
-}
-
-// @iwp.link views/pages/home.md::n.7f88
-function onOpenDocsCenter() {
-  router.go("/docs");
 }
 
 function openExternal(url: string) {
@@ -38,6 +32,16 @@ function onOpenGithubMain() {
 // @iwp.link views/pages/home.md::n.74f4
 function onOpenGithubTooling() {
   openExternal("https://github.com/InstructWare/iwp-tools");
+}
+
+// @iwp.link views/pages/home.md::n.3ff0
+function onJoinFeedbackProgram() {
+  openExternal("https://github.com/InstructWare/instructware.org/issues/new/choose");
+}
+
+// @iwp.link views/pages/home.md::n.42af
+function onOpenProtocolFeedback() {
+  openExternal("https://github.com/InstructWare/instructware.org/issues/new/choose");
 }
 
 // @iwp.link views/pages/home.md::n.e0d2
@@ -70,16 +74,16 @@ function splitContrast(text: string): ContrastPart[] {
 </script>
 
 <template>
-  <!-- @iwp.link views/pages/home.md::n.fcdd -->
-  <!-- @iwp.link views/pages/home.md::n.a216 -->
   <!-- @iwp.link views/pages/home.md::n.732d -->
-  <!-- @iwp.link views/pages/home.md::n.af92 -->
   <!-- @iwp.link views/pages/home.md::n.8e24 -->
+  <!-- @iwp.link views/pages/home.md::n.a216 -->
+  <!-- @iwp.link views/pages/home.md::n.af92 -->
+  <!-- @iwp.link views/pages/home.md::n.fcdd -->
   <TopNavbar />
-  <!-- @iwp.link views/pages/home.md::n.eed5 -->
-  <!-- @iwp.link views/pages/home.md::n.d1d8 -->
   <!-- @iwp.link views/pages/home.md::n.78a8 -->
   <!-- @iwp.link views/pages/home.md::n.93f4 -->
+  <!-- @iwp.link views/pages/home.md::n.d1d8 -->
+  <!-- @iwp.link views/pages/home.md::n.eed5 -->
   <main class="iwp-page iwp-home">
     <!-- @iwp.link views/pages/home.md::n.b30d -->
     <section class="iwp-hero iwp-hero-pro iwp-hover-card">
@@ -96,9 +100,10 @@ function splitContrast(text: string): ContrastPart[] {
         <button class="iwp-btn iwp-btn-lg" @click="onReadProtocol">
           {{ t("actions", "readProtocol") }}
         </button>
-        <button class="iwp-btn iwp-btn-lg iwp-btn-github" @click="onOpenGithubMain">
-          <img class="iwp-btn-icon" :src="githubIcon" alt="" aria-hidden="true" />
-          {{ t("actions", "viewOnGitHub") }}
+        <!-- @iwp.link views/pages/home.md::n.6106 -->
+        <!-- @iwp.link views/pages/home.md::n.c985 -->
+        <button class="iwp-btn iwp-btn-lg iwp-btn-github" @click="onJoinFeedbackProgram">
+          {{ t("actions", "joinFeedback") }}
         </button>
       </div>
       <button class="iwp-hero-meta-link" @click="onOpenGithubTooling">
@@ -106,13 +111,14 @@ function splitContrast(text: string): ContrastPart[] {
       </button>
     </section>
 
-    <!-- @iwp.link views/pages/home.md::n.fca5 -->
+    <!-- @iwp.link views/pages/home.md::n.6106 -->
     <section class="iwp-home-section">
       <h2 class="iwp-section-title">{{ t("home", "sectionParadigm") }}</h2>
       <!-- @iwp.link views/pages/home.md::n.05b0 -->
       <div class="iwp-grid-2">
         <article class="iwp-card iwp-card-contrast iwp-hover-card">
           <h3>{{ t("home", "legacyTitle") }}</h3>
+          <!-- @iwp.link views/pages/home.md::n.e207 -->
           <ul class="iwp-list-clean">
             <li>{{ t("home", "legacyStatic") }}</li>
             <li>{{ t("home", "legacyPrecompiled") }}</li>
@@ -121,6 +127,7 @@ function splitContrast(text: string): ContrastPart[] {
         </article>
         <article class="iwp-card iwp-card-contrast iwp-card-accent iwp-hover-card">
           <h3>{{ t("home", "iwTitle") }}</h3>
+          <!-- @iwp.link views/pages/home.md::n.5d20 -->
           <ul class="iwp-list-clean">
             <li>{{ t("home", "iwDynamic") }}</li>
             <li>{{ t("home", "iwGenerative") }}</li>
@@ -150,21 +157,23 @@ function splitContrast(text: string): ContrastPart[] {
       </div>
     </section>
 
-    <!-- @iwp.link views/pages/home.md::n.94ee -->
+    <!-- @iwp.link views/pages/home.md::n.47af -->
     <section class="iwp-home-section">
       <article class="iwp-card iwp-hover-card">
         <h2 class="iwp-section-title-sm">{{ t("home", "sectionEssence") }}</h2>
-        <!-- @iwp.link views/pages/home.md::n.58f8 -->
         <ul class="iwp-list-clean">
+          <!-- @iwp.link views/pages/home.md::n.06b6 -->
           <li>{{ t("home", "essence1") }}</li>
+          <!-- @iwp.link views/pages/home.md::n.3091 -->
           <li>{{ t("home", "essence2") }}</li>
+          <!-- @iwp.link views/pages/home.md::n.21e8 -->
           <li>{{ t("home", "essence3") }}</li>
         </ul>
       </article>
     </section>
 
-    <!-- @iwp.link views/pages/home.md::n.b66d -->
     <!-- @iwp.link views/pages/home.md::n.5e65 -->
+    <!-- @iwp.link views/pages/home.md::n.b66d -->
     <section :class="['iwp-home-section', 'iwp-values-focus', `iwp-values-style-${valuesContrastStyle}`]">
       <article class="iwp-card iwp-values-card iwp-hover-card">
         <h2 class="iwp-section-title">{{ t("home", "sectionValues") }}</h2>
@@ -194,6 +203,10 @@ function splitContrast(text: string): ContrastPart[] {
     </section>
 
     <!-- @iwp.link views/pages/home.md::n.fddd -->
+    <!-- @iwp.link views/pages/home.md::n.84b5 -->
+    <!-- @iwp.link views/pages/home.md::n.6401 -->
+    <!-- @iwp.link views/pages/home.md::n.29c8 -->
+    <!-- @iwp.link views/pages/home.md::n.7c4a -->
     <section class="iwp-home-section">
       <article class="iwp-card iwp-hover-card">
         <h2 class="iwp-section-title">{{ t("home", "sectionVision") }}</h2>
@@ -218,8 +231,9 @@ function splitContrast(text: string): ContrastPart[] {
         <button class="iwp-btn" @click="onReadProtocol">
           {{ t("actions", "readProtocol") }}
         </button>
-        <button class="iwp-btn" @click="onOpenDocsCenter">
-          {{ t("actions", "openDocsCenter") }}
+        <!-- @iwp.link views/pages/home.md::n.6a9e -->
+        <button class="iwp-btn" @click="onJoinFeedbackProgram">
+          {{ t("actions", "joinFeedback") }}
         </button>
       </div>
     </section>
@@ -239,7 +253,15 @@ function splitContrast(text: string): ContrastPart[] {
         </p>
         <p class="iwp-home-footer-item">
           <span class="iwp-home-footer-label">{{ t("home", "footerProtocolStatusLabel") }}</span>
+          <!-- @iwp.link views/pages/home.md::n.90c6 -->
           <span>{{ t("home", "footerProtocolStatusValue") }}</span>
+        </p>
+        <p class="iwp-home-footer-item">
+          <span class="iwp-home-footer-label">{{ t("home", "footerFeedbackLabel") }}</span>
+          <!-- @iwp.link views/pages/home.md::n.d4f2 -->
+          <button class="iwp-home-footer-link" @click="onOpenProtocolFeedback">
+            {{ t("home", "footerFeedbackValue") }}
+          </button>
         </p>
         <p class="iwp-home-footer-item">
           <span class="iwp-home-footer-label">{{ t("home", "footerGithubLabel") }}</span>

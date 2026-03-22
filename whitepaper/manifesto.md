@@ -18,8 +18,7 @@ This model has worked, but it also shifts adaptation cost to people: users learn
 
 **Our tools should adapt to human instruction, not humans to tools.**
 
-Large language models and agentic systems now make a different approach practical: intent can be expressed in natural language and compiled into executable behavior under policy controls, validation, and traceability.
-
+Large language models and agentic systems now make this approach practical: intent can be authored in natural language and compiled into executable behavior under policy controls, validation, and traceability.
 
 At the same time, AI-assisted coding has introduced a new failure mode: fragmented prompts produce fragmented systems. Without a structured intent layer, teams accumulate behavior that is difficult to test, explain, and maintain.
 
@@ -37,7 +36,7 @@ It is not a static application, and it is not just a chatbot interface. It is a 
 - generate and orchestrate logic,
 - and evolve behavior under explicit constraints.
 
-In this model, software is less about shipping a single fixed binary and more about operating a governed intent-to-execution pipeline.
+In this model, software is less about shipping a single fixed binary and more about operating a governed intent-to-execution runtime.
 
 ---
 
@@ -57,10 +56,8 @@ The objective is not arbitrary UI change. The objective is controlled adaptabili
 
 ### Law III: Continuously Evolvable Runtime
 InstructWare is operated as an evolving runtime rather than a one-time shipped artifact. When capabilities are missing or behavior is incorrect, the system can iterate through guarded update loops to repair or extend functionality.
-In practice, this often runs on agent runtimes that can repair and evolve software within human-defined guardrails.
-
-Reliability comes from bounded self-repair, auditability, testing, and rollback strategies, not from claiming perfect autonomy.
-In practice, bounded evolution follows an explicit control loop: propose -> diff -> verify -> approve -> apply -> monitor -> rollback.
+In practice, this runs on agent runtimes that can repair and evolve software within human-defined guardrails.
+Reliability comes from bounded self-repair, auditability, testing, and rollback strategies, not from claiming perfect autonomy; bounded evolution follows an explicit control loop: propose -> diff -> verify -> approve -> apply -> monitor -> rollback.
 
 ---
 
@@ -74,8 +71,7 @@ We propose the following priorities for the InstructWare era:
 - **Governed machine adaptation to human goals** over humans adapting to machine constraints.
 
 These values do not reject software engineering fundamentals. They re-center them around intent, verification, and long-term maintainability.
-
-We believe that, in the AI era, natural language is becoming a mainstream programming interface. InstructWare's long-term goal is to turn natural-language-first programming into an engineering reality that is governable, verifiable, and continuously evolvable. Traditional languages will remain essential and continue to play a key role at the execution layer.
+We believe that, in the AI era, natural language is becoming a mainstream programming interface. InstructWare's long-term goal is to turn natural-language-first programming into an engineering reality that is governable, verifiable, and continuously evolvable. Traditional languages remain essential and continue to play a key role at the execution layer.
 
 ---
 
@@ -88,6 +84,16 @@ Prompting is useful for ideation, but prompts alone are not a durable system con
 Industry solutions such as Spec Kit already move teams toward spec-driven planning and implementation workflows. InstructWare builds on that direction by treating intent artifacts as protocol-governed runtime contracts, with explicit traceability and drift-control rules that can be validated in tooling and CI.
 
 In short: InstructWare is not anti-code; it is pro-discipline for teams building with AI at production scale.
+
+---
+
+## 04.2 What We Commit to Verify
+
+InstructWare is not a belief system that asks for trust without evidence. We commit to outcomes that can be checked in real workflows:
+
+- declared intent can be mapped to traceable implementation behavior and tests,
+- runtime-impacting changes pass explicit checks before release,
+- and high-risk actions stay auditable and human-governed.
 
 ---
 
@@ -105,7 +111,8 @@ Less time lost to interface friction.
 More time spent expressing intent.
 More confidence that evolving code still matches declared intent.
 
+For builders, the path is practical and iterative: start from intent docs, run governed update loops, measure results, and improve through open feedback.
+
 **Put software back on track to serve humans and the teams who build for them.**
 
 Welcome to the InstructWare era.
-

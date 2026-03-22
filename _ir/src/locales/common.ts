@@ -38,6 +38,7 @@ export const COMMON_TEXTS: Record<string, Record<string, Record<Locale, string>>
     // @iwp.link locales/common.en-US.md::n.ac61
     // @iwp.link locales/common.zh-CN.md::n.639e
     viewOnGitHub: { "zh-CN": "GitHub 仓库", "en-US": "View on GitHub" },
+    joinFeedback: { "zh-CN": "加入反馈计划", "en-US": "Join Feedback Program" },
     readTerminology: { "zh-CN": "术语说明", "en-US": "Terminology" },
   },
   // @iwp.link locales/common.en-US.md::n.5b83
@@ -87,17 +88,17 @@ export const COMMON_TEXTS: Record<string, Record<string, Record<Locale, string>>
     // @iwp.link locales/common.en-US.md::n.0b51
     // @iwp.link locales/common.zh-CN.md::n.0ec1
     visionLead: {
-      "zh-CN": "在 AI 时代，自然语言正走向主流的编程接口。",
+      "zh-CN": "在 AI 时代，自然语言正在成为重要的编程接口之一。",
       "en-US":
-        "In the AI era, natural language is becoming a mainstream programming interface.",
+        "In the AI era, natural language is becoming one of the important programming interfaces.",
     },
     // @iwp.link locales/common.en-US.md::n.f679
     // @iwp.link locales/common.zh-CN.md::n.b37e
     visionBody: {
       "zh-CN":
-        "InstructWare 的长期目标，是把以自然语言为核心的编程方式沉淀为可治理、可验证、可持续演进的工程现实。",
+        "InstructWare 的长期目标，是把自然语言优先编程沉淀为可治理、可验证、可持续演进的工程实践。",
       "en-US":
-        "InstructWare's long-term goal is to turn natural-language-first programming into an engineering reality that is governable, verifiable, and continuously evolvable.",
+        "InstructWare's long-term goal is to turn natural-language-first programming into an engineering practice that is governable, verifiable, and continuously evolvable.",
     },
     // @iwp.link locales/common.en-US.md::n.2598
     // @iwp.link locales/common.zh-CN.md::n.d13b

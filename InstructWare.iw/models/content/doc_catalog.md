@@ -18,21 +18,20 @@
 1. `manifesto`
    - `title_zh`: InstructWare 宣言
    - `title_en`: The InstructWare Manifesto
-   - `summary_zh`: 定义从静态软件向自然语言驱动动态计算范式的转移。
-   - `summary_en`: Defines the transition from static software to natural language-driven dynamic computing.
+   - `summary_zh`: 阐述 InstructWare 的问题定义、核心原则与 Draft 发布背景。
+   - `summary_en`: Explains InstructWare problem framing, core principles, and Public Draft context.
    - `order`: 1
    - `tags`: [`concept`, `vision`, `values`]
 2. `protocol`
    - `title_zh`: IWP 核心规范 v1.0
    - `title_en`: IWP Core Specification v1.0
-   - `summary_zh`: 定义 InstructWare 自然语言源码包的工程化结构与约束。
-   - `summary_en`: Defines engineering structure and constraints for InstructWare natural language source bundles.
+   - `summary_zh`: 定义 IWP Public Draft v1.0 的结构、约束与一致性要求。
+   - `summary_en`: Defines structure, constraints, and conformance requirements for IWP Public Draft v1.0.
    - `order`: 2
-   - `tags`: [`specification`, `bundle`, `architecture`]
+   - `tags`: [`specification`, `draft`, `conformance`]
 
 ## Seed Data: `DocAssetMap`
 - (`manifesto`, `zh-CN`) -> `../whitepaper/manifesto_zh.md`
 - (`manifesto`, `en-US`) -> `../whitepaper/manifesto.md`
 - (`protocol`, `zh-CN`) -> `../protocol/IWP-v1-zh.md`
 - (`protocol`, `en-US`) -> `../protocol/IWP-v1.md`
-

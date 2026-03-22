@@ -34,7 +34,7 @@ export const HOME_TEXTS: Record<string, Record<Locale, string>> = {
   // @iwp.link models/content/home_content.md::n.1f1f
   // @iwp.link models/content/home_content.md::n.fdc3
   sectionParadigm: {
-    "zh-CN": "静态软件 vs InstructWare",
+    "zh-CN": "软件 vs InstructWare",
     "en-US": "Software vs InstructWare",
   },
   // @iwp.link models/content/home_content.md::n.036e
@@ -44,8 +44,8 @@ export const HOME_TEXTS: Record<string, Record<Locale, string>> = {
   },
   // @iwp.link models/content/home_content.md::n.43e2
   sectionEssence: {
-    "zh-CN": "IWP v1 最小闭环",
-    "en-US": "IWP v1 Minimal Loop",
+    "zh-CN": "3 步开始参与",
+    "en-US": "Start in 3 Steps",
   },
   // @iwp.link models/content/home_content.md::n.7b87
   sectionValues: {
@@ -53,36 +53,39 @@ export const HOME_TEXTS: Record<string, Record<Locale, string>> = {
     "en-US": "Values",
   },
   legacyTitle: {
-    "zh-CN": "静态软件",
-    "en-US": "Software",
+    "zh-CN": "传统软件（无 IWP）",
+    "en-US": "Traditional Software (No IWP)",
   },
   legacyStatic: {
-    "zh-CN": "版本发布驱动变更",
-    "en-US": "Release-bound change cycles",
+    "zh-CN": "意图分散、事实来源不稳定",
+    "en-US": "Intent is scattered and source of truth is unstable",
   },
   legacyPrecompiled: {
-    "zh-CN": "界面与流程预先固化",
-    "en-US": "Pre-fixed interfaces and workflows",
+    "zh-CN": "可交付，但更依赖人工评审、跨团队协调与反复同步",
+    "en-US":
+      "Deliverable, but relies more on manual review, cross-team coordination, and repeated sync",
   },
   legacyRigid: {
-    "zh-CN": "代码是主要表达与变更入口",
-    "en-US": "Code is the primary expression and change entry",
+    "zh-CN": "运行时演进多依赖版本发布，响应更慢",
+    "en-US": "Runtime evolution is mostly release-driven and slower",
   },
   iwTitle: {
-    "zh-CN": "InstructWare",
-    "en-US": "InstructWare",
+    "zh-CN": "InstructWare Runtime（基于 IWP）",
+    "en-US": "InstructWare Runtime (With IWP)",
   },
   iwDynamic: {
-    "zh-CN": "人类指令驱动持续迭代",
-    "en-US": "Human instruction drives continuous iteration",
+    "zh-CN": "以共享意图文档作为稳定事实来源",
+    "en-US": "Intent is shared and source of truth is stable",
   },
   iwGenerative: {
-    "zh-CN": "界面在运行时生成与适配",
-    "en-US": "Interfaces are generated and adapted at runtime",
+    "zh-CN": "自动化校验与追溯，持续保持实现与意图对齐",
+    "en-US":
+      "Automated checks and traceability keep implementation aligned with intent",
   },
   iwSelfEvolving: {
-    "zh-CN": "系统在治理边界内持续演进",
-    "en-US": "Systems evolve continuously within governance boundaries",
+    "zh-CN": "在治理边界内持续演进，并降低规模化协同开销",
+    "en-US":
+      "Governed runtime iteration supports continuous evolution with lower coordination overhead at scale",
   },
   law1: {
     "zh-CN": "自然语言优先于代码（首要意图源）",
@@ -97,16 +100,16 @@ export const HOME_TEXTS: Record<string, Record<Locale, string>> = {
     "en-US": "Continuously Evolvable Runtime",
   },
   essence1: {
-    "zh-CN": "Instruction -> Intent -> Execution",
-    "en-US": "Instruction -> Intent -> Execution",
+    "zh-CN": "第 1 步：阅读 Manifesto，对齐问题与原则",
+    "en-US": "Step 1: Read Manifesto to align on problems and principles",
   },
   essence2: {
-    "zh-CN": "`.iw` 是意图层 SSOT",
-    "en-US": "`.iw` as the intent-layer SSOT",
+    "zh-CN": "第 2 步：阅读 IWP Protocol，理解约束与闭环",
+    "en-US": "Step 2: Read IWP Protocol for constraints and loop",
   },
   essence3: {
-    "zh-CN": "`.iwc` 与诊断保障源级追溯",
-    "en-US": "`.iwc` and diagnostics ensure source traceability",
+    "zh-CN": "第 3 步：加入反馈计划，提交真实场景",
+    "en-US": "Step 3: Join feedback program with real-world cases",
   },
   value1: {
     "zh-CN": "以“人类指令”为契约，而非以代码为瓶颈",
@@ -157,8 +160,16 @@ export const HOME_TEXTS: Record<string, Record<Locale, string>> = {
     "en-US": "Protocol Status",
   },
   footerProtocolStatusValue: {
-    "zh-CN": "v1.0 Draft",
-    "en-US": "v1.0 Draft",
+    "zh-CN": "Public Draft v1.0",
+    "en-US": "Public Draft v1.0",
+  },
+  footerFeedbackLabel: {
+    "zh-CN": "草案反馈",
+    "en-US": "Draft Feedback",
+  },
+  footerFeedbackValue: {
+    "zh-CN": "提交 Issue",
+    "en-US": "Open Issue",
   },
   footerGithubLabel: {
     "zh-CN": "源代码",

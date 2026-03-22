@@ -25,3 +25,5 @@
 4. If conflict exists, canonical docs in `assets/docs/` override homepage snapshots.
 5. Homepage section labels and short copy MUST be locale-aware.
 6. Any additional summary chips/facts on home SHOULD be traceable to canonical docs (`manifesto` or `protocol`) and MUST avoid synthetic claims.
+7. Vision-oriented copy SHOULD use measured language and avoid inevitability claims.
+8. Comparison copy SHOULD focus on governance and maintenance trade-offs, not absolute superiority claims.

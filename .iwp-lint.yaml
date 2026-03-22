@@ -140,6 +140,7 @@ execution_presets:
       json: out/session-reconcile.json
       max_diagnostics: 20
       min_severity: error
+      warning_top_n: 2
       suggest_fixes: true
     session_commit:
       evidence_json: out/session-evidence.json
@@ -190,3 +191,5 @@ session:
   link_density_threshold: 0.25
   # Default top-N when baseline gap summary is enabled in session diff.
   baseline_gap_max_items: 20
+  # Default top-N warnings in session reconcile summary.
+  warning_summary_top_n: 2

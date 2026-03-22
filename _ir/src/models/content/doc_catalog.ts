@@ -19,11 +19,11 @@ const DOC_META: DocMeta[] = [
       "en-US": "The InstructWare Manifesto",
     },
     summary: {
-      // @iwp.link models/content/doc_catalog.md::n.1de3
-      "zh-CN": "定义从静态软件向自然语言驱动动态计算范式的转移。",
-      // @iwp.link models/content/doc_catalog.md::n.6aaa
+      // @iwp.link models/content/doc_catalog.md::n.d7c1
+      "zh-CN": "阐述 InstructWare 的问题定义、核心原则与 Draft 发布背景。",
+      // @iwp.link models/content/doc_catalog.md::n.9ef6
       "en-US":
-        "Defines the transition from static software to natural language-driven dynamic computing.",
+        "Explains InstructWare problem framing, core principles, and Public Draft context.",
     },
     // @iwp.link models/content/doc_catalog.md::n.291c
     tags: ["concept", "vision", "values"],
@@ -40,14 +40,14 @@ const DOC_META: DocMeta[] = [
       "en-US": "IWP Core Specification v1.0",
     },
     summary: {
-      // @iwp.link models/content/doc_catalog.md::n.1485
-      "zh-CN": "定义 InstructWare 自然语言源码包的工程化结构与约束。",
-      // @iwp.link models/content/doc_catalog.md::n.526c
+      // @iwp.link models/content/doc_catalog.md::n.dbcf
+      "zh-CN": "定义 IWP Public Draft v1.0 的结构、约束与一致性要求。",
+      // @iwp.link models/content/doc_catalog.md::n.4391
       "en-US":
-        "Defines engineering structure and constraints for InstructWare natural language source bundles.",
+        "Defines structure, constraints, and conformance requirements for IWP Public Draft v1.0.",
     },
-    // @iwp.link models/content/doc_catalog.md::n.d438
-    tags: ["specification", "bundle", "architecture"],
+    // @iwp.link models/content/doc_catalog.md::n.14b2
+    tags: ["specification", "draft", "conformance"],
     // @iwp.link models/content/doc_catalog.md::n.b2ec
     order: 2,
   },

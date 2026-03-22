@@ -12,33 +12,32 @@
     - [text] en: Compile human instruction into governed, verifiable, source-traceable runtime behavior.
   - [text] Primary CTA button: Read Manifesto
   - [text] Secondary CTA button: Read IWP Protocol
-  - [text] Tertiary CTA button: View on GitHub
+  - [text] Tertiary CTA button: Join Feedback Program
   - [text] Tooling link (locale-aware):
     - [text] zh: 工具链：iwp-tools
     - [text] en: Tooling: iwp-tools
-- Paradigm shift section:
+- Traditional software vs InstructWare runtime section:
   - Two-column comparison:
-    - [text] left: Legacy software model (release-bound change cycles, pre-fixed interfaces and workflows, code as primary change entry)
-    - [text] right: InstructWare model (human instruction-driven continuous iteration, runtime-generated and adaptive interfaces, governed continuous evolution)
+    - [text] left: Traditional software without IWP (delivery is feasible, but alignment and runtime evolution rely more on manual review, cross-team coordination, and release cycles)
+    - [text] right: InstructWare runtime with IWP (delivery is feasible, while shared intent SSOT and governed checks improve alignment and reduce coordination overhead)
 - Three laws section:
   - [text] Card 1: Natural Language as the Primary Intent Source
   - [text] Card 2: Dynamic, Adaptive, and Governable Interfaces
   - [text] Card 3: Continuously Evolvable and Governable Runtime
-- IWP essence section:
-  - Key points from protocol:
-    - [text] Instruction -> Intent -> Execution
-    - [text] `.iw` as intent-layer SSOT
-    - [text] `.iwc` and diagnostics ensure source traceability
+- Start in 3 steps section:
+  - [text] Step 1: Read Manifesto and align intent language.
+  - [text] Step 2: Read IWP Protocol and understand conformance.
+  - [text] Step 3: Join Feedback Program and contribute real-world cases.
 - Values section:
   - [text] Human Instruction as the contract over code as the bottleneck.
   - [text] Instruction-to-Execution pipelines over release-bound feature queues.
   - [text] Source-traceable runtime evolution over opaque one-shot deployments.
   - [text] Governed machine adaptation to human goals over humans adapting to machine constraints.
 - Long-term vision section:
-  - [text] zh: 自然语言正走向主流的编程接口。
-  - [text] en: Natural language is becoming a mainstream programming interface.
-  - [text] zh: InstructWare 的长期目标，是把“自然编程”沉淀为可治理、可验证、可持续演进的工程现实。
-  - [text] en: InstructWare's long-term goal is to turn natural programming into an engineering reality that is governable, verifiable, and continuously evolvable.
+  - [text] zh: 自然语言正在成为重要的编程接口之一。
+  - [text] en: Natural language is becoming one of the important programming interfaces.
+  - [text] zh: InstructWare 的长期目标，是把“自然语言优先编程”沉淀为可治理、可验证、可持续演进的工程实践。
+  - [text] en: InstructWare's long-term goal is to turn natural-language-first programming into an engineering practice that is governable, verifiable, and continuously evolvable.
   - [text] zh: 传统语言仍将长期存在，并在执行层持续发挥关键作用。
   - [text] en: Traditional languages will remain essential and continue to play a key role at the execution layer.
 - Final CTA section:
@@ -48,11 +47,12 @@
   - Button group:
     - [text] Open Manifesto
     - [text] Open Protocol
-    - [text] Open Docs Hub
+    - [text] Join Feedback Program
 - Footer metadata section:
   - [text] Copyright: © 2026 InstructWare / DawnChat Core Team
   - [text] Content License: CC BY-ND 4.0
-  - [text] Protocol Status: IWP v1.0 Draft (Pre-Launch)
+  - [text] Protocol Status: IWP Public Draft v1.0
+  - [text] Draft Feedback: Open Issue
   - [text] Source Code: GitHub repository link
 
 ## Display Rules
@@ -64,13 +64,14 @@
 - Home page copy and section labels MUST be locale-aware.
 - Home section copy SHOULD align with extraction constraints in `models/content/home_content.md`.
 - Home sections SHOULD use generous vertical spacing and restrained color palette.
-- Key sections (`Three laws`, `IWP essence`, `Values`) SHOULD be presented as concise cards for fast scanning.
+- Key sections (`Three laws`, `Start in 3 steps`, `Values`) SHOULD be presented as concise cards for fast scanning.
 - Final CTA section SHOULD be visually emphasized as a conclusion block.
 
 ## Interaction Hooks
 - "Read Manifesto" delegates to `logic/docs/on_open_doc.md` with `doc_id=manifesto`.
 - "Read IWP Protocol" delegates to `logic/docs/on_open_doc.md` with `doc_id=protocol`.
-- "Open Docs Center" navigates to `/docs`.
+- "Join Feedback Program" opens `https://github.com/InstructWare/instructware.org/issues/new/choose`.
+- "Open Issue" opens `https://github.com/InstructWare/instructware.org/issues/new/choose`.
 - "View on GitHub" opens `https://github.com/InstructWare/instructware.org`.
 - "Tooling: iwp-tools" opens `https://github.com/InstructWare/iwp-tools`.
 - "Content License" opens `https://github.com/InstructWare/instructware.org/blob/main/whitepaper/LICENSE-CC-BY-ND`.

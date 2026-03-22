@@ -55,7 +55,7 @@ describe("Document Reader Integrity", () => {
     store.openDoc("manifesto", router as never);
     expect(store.currentHtml.value).toContain("<ul>");
     expect(store.currentHtml.value).toContain("<strong>硬件</strong>定义了物理边界。");
-    expect(store.currentHtml.value).toContain("少一点与界面的对抗。<br>");
+    expect(store.currentHtml.value).toContain("少一点界面阻力。<br>");
 
     store.openDoc("protocol", router as never);
     expect(store.currentHtml.value).toContain("状态（Status）");

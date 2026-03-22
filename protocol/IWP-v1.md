@@ -2,7 +2,9 @@
 
 **Status:** Draft (Pre-Launch)
 **Author:** The DawnChat Core Team
-**License:** MIT
+**License:** Apache-2.0
+
+This protocol specification text follows the repository-level Apache-2.0 license unless explicitly overridden.
 
 > **Normative language:** The key words **MUST**, **MUST NOT**, **REQUIRED**, **SHALL**, **SHALL NOT**, **SHOULD**, **SHOULD NOT**, **RECOMMENDED**, **MAY**, and **OPTIONAL** in this document are to be interpreted as described in [RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119) and [RFC 8174](https://datatracker.ietf.org/doc/html/rfc8174), when, and only when, they appear in all capitals.
 
@@ -45,6 +47,15 @@ An implementation is **IWP v1 compliant** only if it satisfies all requirements 
 7. It **MUST** satisfy implementation traceability requirements in Section 9.1 and profile-appropriate drift-control requirements in Section 10.1.
 
 Implementations **MAY** provide extended profiles (for example, enterprise topology) as long as baseline conformance remains intact.
+
+### 3.1 Conformance Boundary: Core and Optional Profiles
+
+IWP uses layered conformance to keep baseline adoption lightweight:
+
+- **Core (required):** Sections 5, 6, 7, 8.1-8.3, 9, 9.1, 10, 10.1, 11, and 12.
+- **Optional profiles:** Named extension sets (for example enterprise topology or agentic runtime behavior).
+- Optional profiles **MUST NOT** relax Core requirements.
+- Implementations **MUST** declare active optional profiles in CI and release gates.
 
 ---
 
@@ -231,6 +242,16 @@ The implementation **MUST** document which timing model it uses and where valida
 IWP intent Markdown **MUST NOT** embed executable source code intended for direct runtime execution in general-purpose languages.  
 Implementations **MAY** allow fenced examples for documentation, but such blocks **MUST** be treated as non-executable content.
 
+### 8.4 Agentic Runtime Loop (Optional Profile)
+
+Implementations **MAY** support an agentic runtime loop for controlled self-modification and iterative delivery (for example `propose -> diff -> verify -> approve -> apply -> monitor -> rollback`).
+
+When such a profile is enabled:
+
+- all runtime-impacting edits **MUST** remain traceable to source intent nodes,
+- verification and drift-control gates in Sections 9.1 and 10.1 **MUST** still apply,
+- high-risk actions **MUST** keep explicit approval checkpoints under Section 12.
+
 ---
 
 ## 9. Compiled Context Sidecar (`.iwc v1`)
@@ -340,6 +361,15 @@ Required gates:
 
 In strict profile, failure of any required gate **MUST** block merge or release.
 
+### 10.2 Minimal Verification Evidence
+
+For each verification run, implementations **MUST** produce machine-readable evidence that can be persisted locally or in CI:
+
+1. gate result summary (`pass`/`fail`) per validation layer,
+2. diagnostic list with stable identifiers,
+3. traceability check result for impacted nodes,
+4. artifact freshness result tied to `source_hash`.
+
 ---
 
 ## 11. Versioning and Compatibility
@@ -359,6 +389,30 @@ IWP follows a familiar pattern from open standards ecosystems:
 - and no single reference implementation is required for protocol legitimacy.
 
 IWP differs from many traditional software interface specifications in one key way: it standardizes intent-to-execution traceability and drift control as protocol-level concerns rather than optional tooling conventions.
+
+### 11.2 Conformance Levels and Compatibility Matrix
+
+To reduce adoption friction while preserving interoperability, implementations **SHOULD** publish conformance levels:
+
+- **L1 Core Structure:** bundle topology, intent boundaries, manifest semantics, and `.iwc v1` output.
+- **L2 Core Governance:** diagnostics mapping, trace contract, and drift-control gates.
+- **L3 Optional Runtime:** one or more optional profiles (for example agentic runtime loop or enterprise profile).
+
+Implementations **SHOULD** publish a compatibility matrix including at least:
+
+- supported IWP protocol major/minor version,
+- supported `.iwc` major version,
+- highest conformance level claimed,
+- enabled optional profile names.
+
+### 11.3 Draft Release Policy (Pre-Launch)
+
+While this specification is marked Draft (Pre-Launch):
+
+- minor structure or wording adjustments **MAY** occur between draft revisions,
+- any normative behavioral change **MUST** be documented in release notes,
+- breaking semantic updates **SHOULD** be announced with explicit migration guidance,
+- draft feedback issues **SHOULD** be filed at `https://github.com/InstructWare/instructware.org/issues/new/choose`.
 
 ---
 

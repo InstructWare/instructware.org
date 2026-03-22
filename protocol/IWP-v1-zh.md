@@ -2,7 +2,9 @@
 
 **状态（Status）:** Draft (Pre-Launch)  
 **作者（Author）:** The DawnChat Core Team  
-**许可（License）:** MIT
+**许可（License）:** Apache-2.0
+
+本协议规范文本默认遵循仓库级 Apache-2.0 许可，除非另有明确覆盖说明。
 
 > **规范关键字（Normative language）:** 本文档中的 **MUST**、**MUST NOT**、**REQUIRED**、**SHALL**、**SHALL NOT**、**SHOULD**、**SHOULD NOT**、**RECOMMENDED**、**MAY**、**OPTIONAL**，仅在全大写出现时，按 [RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119) 与 [RFC 8174](https://datatracker.ietf.org/doc/html/rfc8174) 解释。
 
@@ -43,6 +45,15 @@ IWP 不规定：
 6. **MUST** 拒绝在意图 Markdown 中直接执行的嵌入式传统代码（见第 8.3 节）。
 
 实现 **MAY** 提供扩展组织剖面（如企业版拓扑），但不得破坏基线一致性。
+
+### 3.1 一致性边界：核心与可选剖面
+
+IWP 采用分层一致性模型，以降低基线采纳门槛：
+
+- **核心（必选）:** 第 5、6、7、8.1-8.3、9、9.1、10、10.1、11、12 章。
+- **可选剖面：** 命名扩展集合（例如企业拓扑或 agentic runtime 行为）。
+- 可选剖面 **MUST NOT** 放宽核心要求。
+- 实现 **MUST** 在 CI 与发布门禁中声明已启用的可选剖面。
 
 ---
 
@@ -227,6 +238,16 @@ IWP 兼容系统 **MUST** 具备：
 IWP 意图 Markdown **MUST NOT** 直接内嵌用于运行时执行的通用编程语言代码。  
 实现 **MAY** 允许文档示例代码块，但 **MUST** 将其视为不可执行内容。
 
+### 8.4 Agentic Runtime 闭环（可选剖面）
+
+实现 **MAY** 支持 agentic runtime 闭环，以实现受控自修改与迭代交付（例如 `propose -> diff -> verify -> approve -> apply -> monitor -> rollback`）。
+
+当启用该剖面时：
+
+- 所有影响运行时的编辑 **MUST** 保持可追溯到源意图节点；
+- 第 9.1 与 10.1 章中的验证与漂移控制门禁 **MUST** 仍然生效；
+- 高风险动作 **MUST** 按第 12 章保留明确的审批检查点。
+
 ---
 
 ## 9. 编译上下文伴生产物（`.iwc v1`）
@@ -309,6 +330,15 @@ IWP 实现 **SHOULD** 至少暴露四层校验：
 - line range，
 - remediation hint（如可提供）。
 
+### 10.2 最小化验证证据
+
+在每次验证运行中，实现 **MUST** 产出可机器读取的证据，并可在本地或 CI 持久化：
+
+1. 各校验层的门禁结果摘要（`pass`/`fail`）；
+2. 带稳定标识符的诊断列表；
+3. 受影响节点的可追踪性检查结果；
+4. 与 `source_hash` 绑定的产物新鲜度结果。
+
 ---
 
 ## 11. 版本与兼容策略
@@ -318,6 +348,30 @@ IWP 实现 **SHOULD** 至少暴露四层校验：
 - 对不支持的主版本，实现 **MUST** 明确拒绝。
 - 对未知且非关键字段，仅可在文档化的宽松模式下 **SHOULD** 选择忽略。
 - 破坏性变更 **MUST** 升主版本并提供迁移指引。
+
+### 11.1 Draft 发布策略（Pre-Launch）
+
+当本规范处于 Draft（Pre-Launch）阶段时：
+
+- 草案小版本之间 **MAY** 存在结构与措辞微调；
+- 所有规范性行为变更 **MUST** 在发布说明中记录；
+- 破坏性语义更新 **SHOULD** 提供明确迁移指引并提前公告；
+- 草案反馈问题 **SHOULD** 提交至 `https://github.com/InstructWare/instructware.org/issues/new/choose`。
+
+### 11.2 一致性等级与兼容矩阵
+
+为降低采纳摩擦并保持互操作性，实现 **SHOULD** 发布一致性等级：
+
+- **L1 Core Structure：** 包拓扑、意图边界、manifest 语义与 `.iwc v1` 输出。
+- **L2 Core Governance：** 诊断映射、追踪契约与漂移控制门禁。
+- **L3 Optional Runtime：** 一个或多个可选剖面（例如 agentic runtime 闭环或企业剖面）。
+
+实现 **SHOULD** 发布兼容矩阵，至少包含：
+
+- 支持的 IWP 协议主/次版本；
+- 支持的 `.iwc` 主版本；
+- 宣称的一致性最高等级；
+- 已启用的可选剖面名称。
 
 ---
 
