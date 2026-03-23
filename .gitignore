@@ -6,6 +6,7 @@
 !.github/
 !.github/workflows/
 !.github/workflows/ci.yml
+!.github/workflows/release-runtime-pack.yml
 
 # Keep public project assets.
 !README.md
