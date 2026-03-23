@@ -22,7 +22,7 @@
 - `home.hero.subtitle`: InstructWare turns human instruction into governed, verifiable runtime behavior.
 - `home.hero.tooling_link`: Tooling: iwp-tools
 - `home.section.vision`: Long-Term Vision
-- `home.vision.lead`: In the AI era, natural language is becoming a mainstream programming interface.
+- `home.vision.lead`: In the AI era, natural language is becoming one of the important programming interfaces.
 - `home.vision.body`: InstructWare's long-term goal is to turn natural-language-first programming into an engineering reality that is governable, verifiable, and continuously evolvable.
 - `home.vision.footnote`: Traditional languages will remain essential and continue to play a key role at the execution layer.
 - `home.cta.tagline`: Forget the syntax. Just instruct.

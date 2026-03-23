@@ -22,7 +22,7 @@
 - `home.hero.subtitle`: InstructWare 将人类指令转化为可治理、可验证的运行时行为。
 - `home.hero.tooling_link`: 工具链：iwp-tools
 - `home.section.vision`: 长期愿景
-- `home.vision.lead`: 在 AI 时代，自然语言正走向主流的编程接口。
+- `home.vision.lead`: 在 AI 时代，自然语言正在成为重要的编程接口之一。
 - `home.vision.body`: InstructWare 的长期目标，是把以自然语言为核心的编程方式沉淀为可治理、可验证、可持续演进的工程现实。
 - `home.vision.footnote`: 传统语言仍将长期存在，并在执行层持续发挥关键作用。
 - `home.cta.tagline`: 忘掉语法，下达指令。

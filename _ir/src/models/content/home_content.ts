@@ -88,16 +88,17 @@ export const HOME_TEXTS: Record<string, Record<Locale, string>> = {
       "Governed runtime iteration supports continuous evolution with lower coordination overhead at scale",
   },
   law1: {
-    "zh-CN": "自然语言优先于代码（首要意图源）",
-    "en-US": "Natural Language as the Primary Intent Source",
+    "zh-CN": "自然语言是首要意图源，意图层语言无关",
+    "en-US": "Natural Language as the Primary Intent Source, Intent Layer Language-Agnostic",
   },
   law2: {
     "zh-CN": "界面可生成、可适配、可约束",
     "en-US": "Dynamic and Generative Interface",
   },
   law3: {
-    "zh-CN": "运行时持续演进且可治理",
-    "en-US": "Continuously Evolvable Runtime",
+    "zh-CN": "运行时持续演进且可治理，执行层实现语言无关",
+    "en-US":
+      "Continuously Evolvable Runtime, Execution Layer Implementation-Language-Agnostic",
   },
   essence1: {
     "zh-CN": "第 1 步：阅读 Manifesto，对齐问题与原则",

@@ -71,7 +71,11 @@ We propose the following priorities for the InstructWare era:
 - **Governed machine adaptation to human goals** over humans adapting to machine constraints.
 
 These values do not reject software engineering fundamentals. They re-center them around intent, verification, and long-term maintainability.
-We believe that, in the AI era, natural language is becoming a mainstream programming interface. InstructWare's long-term goal is to turn natural-language-first programming into an engineering reality that is governable, verifiable, and continuously evolvable. Traditional languages remain essential and continue to play a key role at the execution layer.
+We believe that, in the AI era, natural language is becoming a mainstream programming interface.
+
+InstructWare treats the intent layer as language-agnostic and the execution layer as implementation-language-agnostic. 
+
+InstructWare's long-term goal is to turn natural-language-first programming into an engineering reality that is governable, verifiable, and continuously evolvable. Traditional languages remain essential and continue to play a key role at the execution layer.
 
 ---
 

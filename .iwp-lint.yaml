@@ -127,6 +127,8 @@ execution_presets:
   # Safe default for agent coding loop.
   # Keeps error-level impacted nodes without narrowing anchor level.
   agent-default:
+    session_start:
+      if_missing: true
     session_diff:
       node_severity: error
       markdown_excerpt_max_chars: 240
@@ -142,6 +144,7 @@ execution_presets:
       min_severity: error
       warning_top_n: 2
       suggest_fixes: true
+      auto_build_sidecar: true
     session_commit:
       evidence_json: out/session-evidence.json
       json: out/session-commit.json

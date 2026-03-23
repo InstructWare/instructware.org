@@ -28,6 +28,8 @@ IWP specifies:
 - implementation traceability contracts between intent nodes and executable artifacts.
 
 IWP does not specify:
+- a single mandatory natural language for authoring intent,
+- a single mandatory programming language for implementation,
 - a single mandatory UI framework or backend architecture,
 - a specific LLM vendor or model family,
 - a universal strategy for application-level business semantics.
@@ -251,6 +253,15 @@ When such a profile is enabled:
 - all runtime-impacting edits **MUST** remain traceable to source intent nodes,
 - verification and drift-control gates in Sections 9.1 and 10.1 **MUST** still apply,
 - high-risk actions **MUST** keep explicit approval checkpoints under Section 12.
+
+### 8.5 Language Neutrality and Support Disclosure
+
+To preserve implementation diversity while keeping intent contracts stable:
+
+- Implementations **MUST NOT** require a single natural language for intent authoring or a single implementation language for execution.
+- Implementations **MUST** apply the same traceability and drift-control gates (Sections 9.1 and 10.1) across all declared supported intent languages and runtime language targets.
+- Implementations **SHOULD** publish a support matrix for intent languages and runtime language targets with explicit maturity labels (for example `stable`, `beta`, `experimental`).
+- Implementations **MUST** document known parity limits when behavioral equivalence across declared targets is not yet guaranteed.
 
 ---
 

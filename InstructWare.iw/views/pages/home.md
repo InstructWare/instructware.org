@@ -21,9 +21,9 @@
     - [text] left: Traditional software without IWP (delivery is feasible, but alignment and runtime evolution rely more on manual review, cross-team coordination, and release cycles)
     - [text] right: InstructWare runtime with IWP (delivery is feasible, while shared intent SSOT and governed checks improve alignment and reduce coordination overhead)
 - Three laws section:
-  - [text] Card 1: Natural Language as the Primary Intent Source
+  - [text] Card 1: Natural Language as the Primary Intent Source, Intent Layer Language-Agnostic
   - [text] Card 2: Dynamic, Adaptive, and Governable Interfaces
-  - [text] Card 3: Continuously Evolvable and Governable Runtime
+  - [text] Card 3: Continuously Evolvable Runtime, Execution Layer Implementation-Language-Agnostic
 - Start in 3 steps section:
   - [text] Step 1: Read Manifesto and align intent language.
   - [text] Step 2: Read IWP Protocol and understand conformance.
@@ -34,8 +34,8 @@
   - [text] Source-traceable runtime evolution over opaque one-shot deployments.
   - [text] Governed machine adaptation to human goals over humans adapting to machine constraints.
 - Long-term vision section:
-  - [text] zh: 自然语言正在成为重要的编程接口之一。
-  - [text] en: Natural language is becoming one of the important programming interfaces.
+  - [text] zh: 在 AI 时代，自然语言正在成为重要的编程接口之一。
+  - [text] en: In the AI era, natural language is becoming one of the important programming interfaces.
   - [text] zh: InstructWare 的长期目标，是把“自然语言优先编程”沉淀为可治理、可验证、可持续演进的工程实践。
   - [text] en: InstructWare's long-term goal is to turn natural-language-first programming into an engineering practice that is governable, verifiable, and continuously evolvable.
   - [text] zh: 传统语言仍将长期存在，并在执行层持续发挥关键作用。
