@@ -16,6 +16,8 @@
 !_ir/**
 !protocol/
 !protocol/**
+!agent/
+!agent/**
 !schema/
 !schema/**
 !whitepaper/
