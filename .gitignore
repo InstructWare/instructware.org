@@ -16,6 +16,8 @@
 !_ir/**
 !protocol/
 !protocol/**
+!tools/
+!tools/**
 !agent/
 !agent/**
 !schema/

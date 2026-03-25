@@ -1,30 +1,25 @@
 {
-  "name": "_ir",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "ir",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "lint": "tsc --noEmit -p tsconfig.json",
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
-    "markdown-it": "^14.1.0",
-    "mermaid": "^11.13.0"
+    "marked": "^17.0.5",
+    "mermaid": "^11.13.0",
+    "vue": "^3.5.30",
+    "vue-router": "^5.0.4"
   },
   "devDependencies": {
-    "@types/node": "^24.6.0",
-    "jsdom": "^29.0.0",
-    "typescript": "^5.9.3",
-    "vitepress": "^1.6.4",
-    "vitest": "^4.1.0",
-    "vue": "^3.5.30"
+    "@types/node": "^24.12.0",
+    "@vitejs/plugin-vue": "^6.0.5",
+    "@vue/tsconfig": "^0.9.0",
+    "typescript": "~5.9.3",
+    "vite": "^8.0.1",
+    "vue-tsc": "^3.2.5"
   }
 }

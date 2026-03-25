@@ -1,9 +1,6 @@
-# Canonical IWP markdown root (intent SSOT).
 iwp_root: InstructWare.iw
-# Code roots that should host colocated @iwp.link implementations.
 code_roots:
   - _ir/
-# File extensions considered as code for link coverage/diff analysis.
 include_ext:
   - .vue
   - .py
@@ -12,120 +9,31 @@ include_ext:
   - .js
   - .jsx
   - .css
-# Excludes used by lint/normalize/sidecar/snapshot discovery.
-code_exclude_globs:
-  - "**/node_modules/**"
-  - "**/dist/**"
-  - "**/__pycache__/**"
-  - "**/.pytest_cache/**"
-# Test file patterns used by tested-node related checks.
-test_globs:
-  - "**/tests/**"
-  - "**/*.spec.*"
-  - "**/*.test.*"
-# Stable node identity and lookup artifacts.
-node_registry_file: .iwp/node_registry.v1.json
-node_catalog_file: .iwp/node_catalog.v1.json
-cache:
-  dir: .iwp/cache
-  node_index_db_file: .iwp/cache/node_index.v1.sqlite
-  snapshot_db_file: .iwp/cache/snapshots.sqlite
-compiled:
-  dir: .iwp/compiled
-# When false, same symbol cannot carry multiple links.
-allow_multi_link_per_symbol: false
-critical_node_patterns:
-  - "interaction hooks"
-  - "trigger"
-  - "execution flow"
-# Baseline thresholds (overridden by coverage_profiles when enabled).
+
 thresholds:
   node_linked_min: 60
   critical_linked_min: 80
   node_tested_min: 0
-# Enable profile-based coverage policy by file/kind/anchor level.
+
 enable_profile_coverage: true
-coverage_profiles:
-  - name: logic_high
-    file_type_ids:
-      - logic
-      - state
-      - middleware
-    node_linked_min: 80
-    critical_linked_min: 100
-    missing_severity: error
-    
-  - name: views_interaction
-    computed_kind_prefixes:
-      - views.pages.interaction_hooks
-      - views.components.interaction_hooks
-    anchor_levels:
-      - interaction
-    node_linked_min: 100
-    critical_linked_min: 100
-    missing_severity: error
-
-  - name: views_structure_layout
-    computed_kind_prefixes:
-      - views.pages.layout_tree
-      - views.components.layout
-    anchor_levels:
-      - structure
-    node_linked_min: 85
-    critical_linked_min: 100
-    missing_severity: error
-
-  - name: views_structure_display_rules
-    computed_kind_prefixes:
-      - views.pages.display_rules
-    anchor_levels:
-      - structure
-    node_linked_min: 40
-    critical_linked_min: 100
-    missing_severity: error
-
-  - name: views_text
-    file_type_ids:
-      - views.pages
-      - views.components
-    anchor_levels:
-      - text
-    node_linked_min: 0
-    critical_linked_min: 0
-    missing_severity: warning
-  - name: styles_locales
-    file_type_ids:
-      - styles
-      - locales
-    node_linked_min: 0
-    critical_linked_min: 0
-    missing_severity: warning
 diff_defaults:
   base: HEAD~1
   head: HEAD
+
 schema:
   file: builtin
   mode: compat
+  page_only:
+    enabled: true
   exclude_markdown_globs:
-    - "README.md"
-    - "dependency.md"
-    - "architecture.md"
+    - README.md
+    - dependency.md
+    - architecture.md
 
-code_sidecar:
-  enabled: true
-  dir: .iwp/compiled/code
-  replace_pure_link_line: true
-  max_diagnostics: 20
-  include_node_anchor_text: true
-  include_node_block_text: true
+authoring:
+  node_generation_mode: annotated_only
 
-# Runtime parameter presets for iwp-build CLI.
-# Scope note:
-# - execution_presets: command parameter bundles
-# - coverage_profiles: lint policy rules (different concept)
 execution_presets:
-  # Safe default for agent coding loop.
-  # Keeps error-level impacted nodes without narrowing anchor level.
   agent-default:
     session_start:
       if_missing: true
@@ -148,37 +56,6 @@ execution_presets:
     session_commit:
       evidence_json: out/session-evidence.json
       json: out/session-commit.json
-
-  # Smaller context window for fast triage (optimization preset).
-  agent-fast:
-    session_diff:
-      node_severity: error
-      node_anchor_level:
-        - interaction
-      include_baseline_gaps: true
-      max_gap_items: 10
-      format: text
-    session_reconcile:
-      format: text
-      max_diagnostics: 10
-      suggest_fixes: true
-
-  # Debug preset to keep both text protocol and JSON sidecar payloads.
-  agent-debug:
-    session_diff:
-      format: both
-      debug_raw: true
-      include_baseline_gaps: true
-      max_gap_items: 30
-      json: out/session-diff.debug.json
-    session_reconcile:
-      format: both
-      debug_raw: true
-      max_diagnostics: 30
-      suggest_fixes: true
-      json: out/session-reconcile.debug.json
-
-  # CI preset for strict delivery gate.
   ci-strict:
     verify:
       with_tests: true
@@ -186,13 +63,3 @@ execution_presets:
     session_commit:
       evidence_json: out/session-evidence.json
       json: out/session-commit.json
-
-session:
-  # If true, session diff/reconcile auto-starts when no open session exists.
-  auto_start_on_missing: false
-  # Warn when links are too concentrated in a small code area.
-  link_density_threshold: 0.25
-  # Default top-N when baseline gap summary is enabled in session diff.
-  baseline_gap_max_items: 20
-  # Default top-N warnings in session reconcile summary.
-  warning_summary_top_n: 2

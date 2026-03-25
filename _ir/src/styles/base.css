@@ -1,0 +1,358 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--iwp-font);
+  color: var(--iwp-text-muted);
+  background: var(--iwp-canvas-bg);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--iwp-primary);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--iwp-space-2);
+}
+
+p,
+li {
+  color: var(--iwp-text-muted);
+  font-weight: 420;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--iwp-primary);
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+:where(a, button, .btn, .nav-link, .locale-toggle__button, .theme-toggle, .brand):focus-visible {
+  outline: 2px solid var(--iwp-primary);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+.container {
+  width: min(calc(100% - (var(--iwp-space-3) * 2)), var(--iwp-container));
+  margin: 0 auto;
+}
+
+.page {
+  display: grid;
+  gap: var(--iwp-space-3);
+  padding: var(--iwp-space-4) 0 var(--iwp-space-6);
+}
+
+.card {
+  background: var(--iwp-surface);
+  border: 1px solid var(--iwp-border);
+  border-radius: 12px;
+  padding: var(--iwp-space-3);
+  box-shadow: 0 6px 24px var(--iwp-shadow-soft);
+}
+
+.eyebrow {
+  color: var(--iwp-text-muted);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.lead {
+  color: var(--iwp-text-muted);
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--iwp-space-2);
+}
+
+.btn {
+  border: 1px solid color-mix(in srgb, var(--iwp-primary) 24%, var(--iwp-border));
+  background: var(--iwp-surface-elevated);
+  color: var(--iwp-primary);
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-color: var(--iwp-primary);
+  background: color-mix(in srgb, var(--iwp-primary) 5%, var(--iwp-surface-elevated));
+}
+
+.btn-primary {
+  background: var(--iwp-primary);
+  border-color: var(--iwp-primary);
+  color: var(--iwp-primary-contrast);
+}
+
+.btn-primary:hover {
+  background: var(--iwp-primary-hover);
+  border-color: var(--iwp-primary-hover);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--iwp-primary);
+}
+
+.app-header {
+  border-bottom: 1px solid var(--iwp-border);
+  background: var(--iwp-surface);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.app-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--iwp-space-2);
+  padding: var(--iwp-space-2) 0;
+}
+
+.brand {
+  font-weight: 620;
+  color: var(--iwp-text);
+}
+
+.nav {
+  display: flex;
+  gap: var(--iwp-space-2);
+}
+
+.nav-link {
+  color: var(--iwp-text-muted);
+}
+
+.nav-link.active {
+  color: var(--iwp-primary);
+  font-weight: 600;
+}
+
+.app-header__controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.locale-toggle {
+  display: inline-flex;
+  border: 1px solid var(--iwp-border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--iwp-surface-elevated);
+}
+
+.locale-toggle__button {
+  border: 0;
+  background: transparent;
+  color: var(--iwp-text-muted);
+  padding: 8px 10px;
+  cursor: pointer;
+  min-width: 52px;
+}
+
+.locale-toggle__button.active {
+  color: var(--iwp-primary-contrast);
+  background: var(--iwp-primary);
+}
+
+.theme-toggle {
+  border: 1px solid var(--iwp-border);
+  background: var(--iwp-surface-elevated);
+  color: var(--iwp-text);
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.app-footer {
+  border-top: 1px solid var(--iwp-border);
+  background: var(--iwp-surface);
+}
+
+.app-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--iwp-space-2);
+  color: var(--iwp-text-muted);
+  padding: var(--iwp-space-2) 0;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--iwp-space-2);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--iwp-space-2);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: var(--iwp-surface-muted);
+  color: var(--iwp-text-muted);
+  margin-bottom: var(--iwp-space-2);
+}
+
+.markdown-view {
+  min-height: 480px;
+  padding: clamp(20px, 2vw, 28px);
+}
+
+.markdown-body {
+  color: var(--iwp-text-muted);
+  font-size: 16px;
+  line-height: 1.7;
+  word-break: break-word;
+}
+
+.markdown-body > *:first-child {
+  margin-top: 0;
+}
+
+.markdown-body > *:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom: 1px solid var(--iwp-border);
+  padding-bottom: 0.3em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body p,
+.markdown-body li {
+  color: var(--iwp-text-muted);
+}
+
+.markdown-body strong {
+  color: var(--iwp-text);
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 1.5em;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: var(--iwp-text-muted);
+  border-left: 0.25em solid var(--iwp-border);
+}
+
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  border: 1px solid var(--iwp-border);
+  padding: 6px 13px;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: var(--iwp-surface-muted);
+}
+
+.markdown-body hr {
+  border: 0;
+  border-top: 1px solid var(--iwp-border);
+  margin: 24px 0;
+}
+
+.markdown-body img {
+  max-width: 100%;
+}
+
+.markdown-body .mermaid {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  background: var(--iwp-surface-muted);
+  border: 1px solid var(--iwp-border);
+  border-radius: 10px;
+  padding: var(--iwp-space-2);
+  margin: var(--iwp-space-2) 0;
+}
+
+.markdown-body pre {
+  line-height: 1.75;
+  background: var(--iwp-code-bg);
+  border: 1px solid var(--iwp-border);
+  border-radius: 10px;
+  padding: var(--iwp-space-2);
+  overflow: auto;
+}
+
+.markdown-body code {
+  font-family: var(--iwp-mono);
+  background: var(--iwp-code-inline-bg);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.markdown-body pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.state-message {
+  color: var(--iwp-text-muted);
+}
+
+@media (max-width: 720px) {
+  .app-header__inner {
+    flex-wrap: wrap;
+  }
+
+  .app-header__controls {
+    margin-left: auto;
+  }
+
+  .app-footer__inner {
+    flex-direction: column;
+  }
+}
