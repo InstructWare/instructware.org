@@ -45,13 +45,34 @@ jobs:
               "whitepaper/manifesto.md",
               "schema/IWP-Schema-v1.md",
               "schema/README.md",
-              "agent/v2/agent.md",
-              "agent/v2/skills/README.md",
-              "agent/v2/skills/01-intent-authoring.md",
-              "agent/v2/skills/02-ir-implementation.md",
-              "agent/v2/skills/03-link-alignment.md",
-              "agent/v2/skills/04-reverse-review.md",
           ]
+
+          agent_root = root / "agent" / "v2"
+          agent_md = agent_root / "agent.md"
+          skills_dir = agent_root / "skills"
+          templates_dir = agent_root / "templates"
+
+          dynamic_missing = []
+          if not agent_md.is_file():
+              dynamic_missing.append(str(agent_md.relative_to(root)))
+          if not skills_dir.is_dir():
+              dynamic_missing.append(str(skills_dir.relative_to(root)))
+          if not templates_dir.is_dir():
+              dynamic_missing.append(str(templates_dir.relative_to(root)))
+          if dynamic_missing:
+              raise SystemExit(f"missing runtime pack paths: {dynamic_missing}")
+
+          entries.append(str(agent_md.relative_to(root)))
+          entries.extend(
+              str(path.relative_to(root))
+              for path in sorted(skills_dir.rglob("*"))
+              if path.is_file()
+          )
+          entries.extend(
+              str(path.relative_to(root))
+              for path in sorted(templates_dir.rglob("*"))
+              if path.is_file()
+          )
 
           missing = [item for item in entries if not (root / item).is_file()]
           if missing:
