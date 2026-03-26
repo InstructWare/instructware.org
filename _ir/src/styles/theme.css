@@ -1,9 +1,11 @@
 :root {
-  --iwp-primary: #3f536d;
-  --iwp-primary-hover: #35485f;
+  --iwp-primary: #0969da;
+  --iwp-primary-hover: #0550ae;
   --iwp-primary-contrast: #ffffff;
-  --iwp-warning: #dc2626;
-  --iwp-font: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --iwp-warning: #cf222e;
+  --iwp-font:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "SF Pro Text", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
   --iwp-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   --iwp-container: 1160px;
   --iwp-space-1: 8px;
@@ -12,44 +14,44 @@
   --iwp-space-4: 32px;
   --iwp-space-5: 40px;
   --iwp-space-6: 48px;
-  --iwp-code-bg: #f8fafc;
-  --iwp-code-inline-bg: #f1f5f9;
-  --iwp-code-text: #23324a;
-  --iwp-code-muted: #64748b;
-  --iwp-code-key: #1d4ed8;
-  --iwp-code-string: #0f766e;
-  --iwp-code-number: #334155;
-  --iwp-text: #27364a;
-  --iwp-text-muted: #5d6c80;
-  --iwp-heading: #3f536d;
+  --iwp-code-bg: #f6f8fa;
+  --iwp-code-inline-bg: rgba(175, 184, 193, 0.2);
+  --iwp-code-text: #24292f;
+  --iwp-code-muted: #656d76;
+  --iwp-code-key: #0550ae;
+  --iwp-code-string: #0a7f3f;
+  --iwp-code-number: #0a3069;
+  --iwp-text: #1f2328;
+  --iwp-text-muted: #57606a;
+  --iwp-heading: #1f2328;
   --iwp-surface: #ffffff;
-  --iwp-surface-muted: #f8fafc;
+  --iwp-surface-muted: #f6f8fa;
   --iwp-surface-elevated: #ffffff;
-  --iwp-border: #e2e8f0;
-  --iwp-canvas-bg: #f5f7fb;
-  --iwp-shadow-soft: rgba(15, 23, 42, 0.08);
-  --iwp-glow: rgba(36, 41, 47, 0.14);
+  --iwp-border: #d0d7de;
+  --iwp-canvas-bg: #f6f8fa;
+  --iwp-shadow-soft: rgba(31, 35, 40, 0.06);
+  --iwp-glow: rgba(9, 105, 218, 0.14);
 }
 
 :root.dark {
-  --iwp-primary: #d6e3f7;
-  --iwp-primary-hover: #e5eefc;
-  --iwp-primary-contrast: #0b0f14;
-  --iwp-text: #edf3ff;
-  --iwp-heading: #d6e3f7;
-  --iwp-surface: #0a0d12;
-  --iwp-border: #2a313d;
-  --iwp-text-muted: #9ba8ba;
+  --iwp-primary: #58a6ff;
+  --iwp-primary-hover: #79c0ff;
+  --iwp-primary-contrast: #0d1117;
+  --iwp-text: #e6edf3;
+  --iwp-heading: #f0f6fc;
+  --iwp-surface: #161b22;
+  --iwp-border: #30363d;
+  --iwp-text-muted: #8b949e;
   --iwp-surface-muted: #0d1117;
-  --iwp-surface-elevated: #11161d;
-  --iwp-canvas-bg: #05070a;
-  --iwp-shadow-soft: rgba(3, 7, 18, 0.56);
-  --iwp-glow: rgba(242, 245, 249, 0.2);
-  --iwp-code-bg: #0f1a2c;
-  --iwp-code-inline-bg: #1b2740;
-  --iwp-code-text: #edf3ff;
-  --iwp-code-muted: #97aac5;
-  --iwp-code-key: #9ecbff;
-  --iwp-code-string: #6ef3dc;
+  --iwp-surface-elevated: #1c2128;
+  --iwp-canvas-bg: #0d1117;
+  --iwp-shadow-soft: rgba(1, 4, 9, 0.45);
+  --iwp-glow: rgba(88, 166, 255, 0.26);
+  --iwp-code-bg: #0d1117;
+  --iwp-code-inline-bg: rgba(110, 118, 129, 0.4);
+  --iwp-code-text: #e6edf3;
+  --iwp-code-muted: #8b949e;
+  --iwp-code-key: #79c0ff;
+  --iwp-code-string: #7ee787;
   --iwp-code-number: #a5d6ff;
 }

@@ -7,30 +7,39 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--iwp-font);
-  color: var(--iwp-text-muted);
+  color: var(--iwp-text);
   background: var(--iwp-canvas-bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  color: var(--iwp-primary);
-  font-weight: 500;
-  letter-spacing: -0.01em;
+  color: var(--iwp-heading);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
   margin: 0 0 var(--iwp-space-2);
 }
 
 p,
 li {
   color: var(--iwp-text-muted);
-  font-weight: 420;
+  font-weight: 400;
   line-height: 1.65;
 }
 
 a {
   color: var(--iwp-primary);
   text-decoration: none;
+  text-underline-offset: 0.16em;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 button {
@@ -57,15 +66,16 @@ button {
 .card {
   background: var(--iwp-surface);
   border: 1px solid var(--iwp-border);
-  border-radius: 12px;
+  border-radius: 10px;
   padding: var(--iwp-space-3);
-  box-shadow: 0 6px 24px var(--iwp-shadow-soft);
+  box-shadow: 0 1px 3px var(--iwp-shadow-soft);
 }
 
 .eyebrow {
   color: var(--iwp-text-muted);
-  font-size: 0.9rem;
-  letter-spacing: 0.04em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -81,23 +91,28 @@ button {
 }
 
 .btn {
-  border: 1px solid color-mix(in srgb, var(--iwp-primary) 24%, var(--iwp-border));
+  border: 1px solid var(--iwp-border);
   background: var(--iwp-surface-elevated);
-  color: var(--iwp-primary);
-  border-radius: 10px;
-  padding: 10px 16px;
+  color: var(--iwp-text);
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
   cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .btn:hover {
-  border-color: var(--iwp-primary);
-  background: color-mix(in srgb, var(--iwp-primary) 5%, var(--iwp-surface-elevated));
+  border-color: color-mix(in srgb, var(--iwp-primary) 34%, var(--iwp-border));
+  background: var(--iwp-surface-muted);
 }
 
 .btn-primary {
   background: var(--iwp-primary);
   border-color: var(--iwp-primary);
   color: var(--iwp-primary-contrast);
+  box-shadow: 0 1px 0 rgba(27, 31, 36, 0.1);
 }
 
 .btn-primary:hover {
@@ -107,15 +122,16 @@ button {
 
 .btn-ghost {
   background: transparent;
-  color: var(--iwp-primary);
+  color: var(--iwp-text-muted);
 }
 
 .app-header {
   border-bottom: 1px solid var(--iwp-border);
-  background: var(--iwp-surface);
+  background: color-mix(in srgb, var(--iwp-surface) 88%, transparent);
+  backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 30;
 }
 
 .app-header__inner {
@@ -123,11 +139,14 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: var(--iwp-space-2);
-  padding: var(--iwp-space-2) 0;
+  min-height: 64px;
+  padding: 10px 0;
 }
 
 .brand {
-  font-weight: 620;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
   color: var(--iwp-text);
 }
 
@@ -138,11 +157,21 @@ button {
 
 .nav-link {
   color: var(--iwp-text-muted);
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background: var(--iwp-surface-muted);
+  color: var(--iwp-text);
 }
 
 .nav-link.active {
   color: var(--iwp-primary);
   font-weight: 600;
+  background: color-mix(in srgb, var(--iwp-primary) 12%, transparent);
 }
 
 .app-header__controls {
@@ -154,7 +183,7 @@ button {
 .locale-toggle {
   display: inline-flex;
   border: 1px solid var(--iwp-border);
-  border-radius: 10px;
+  border-radius: 6px;
   overflow: hidden;
   background: var(--iwp-surface-elevated);
 }
@@ -163,9 +192,11 @@ button {
   border: 0;
   background: transparent;
   color: var(--iwp-text-muted);
-  padding: 8px 10px;
+  padding: 6px 10px;
   cursor: pointer;
   min-width: 52px;
+  font-size: 0.8125rem;
+  font-weight: 500;
 }
 
 .locale-toggle__button.active {
@@ -177,9 +208,15 @@ button {
   border: 1px solid var(--iwp-border);
   background: var(--iwp-surface-elevated);
   color: var(--iwp-text);
-  border-radius: 10px;
-  padding: 8px 12px;
+  border-radius: 6px;
+  padding: 6px 12px;
   cursor: pointer;
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.theme-toggle:hover {
+  background: var(--iwp-surface-muted);
 }
 
 .app-footer {
@@ -219,14 +256,19 @@ button {
 
 .markdown-view {
   min-height: 480px;
-  padding: clamp(20px, 2vw, 28px);
+  padding: clamp(24px, 2.4vw, 36px);
 }
 
 .markdown-body {
-  color: var(--iwp-text-muted);
+  color: var(--iwp-text);
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.6;
   word-break: break-word;
+}
+
+.markdown-body--docs {
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 .markdown-body > *:first-child {
@@ -240,41 +282,59 @@ button {
 .markdown-body h1,
 .markdown-body h2 {
   border-bottom: 1px solid var(--iwp-border);
-  padding-bottom: 0.3em;
+  padding-bottom: 0.35em;
 }
 
 .markdown-body h1 {
   font-size: 2em;
+  margin: 0.67em 0 0.5em;
 }
 
 .markdown-body h2 {
   font-size: 1.5em;
+  margin: 1em 0 0.5em;
 }
 
 .markdown-body h3 {
   font-size: 1.25em;
+  margin: 1em 0 0.5em;
 }
 
 .markdown-body h4 {
   font-size: 1em;
+  margin: 1em 0 0.5em;
 }
 
 .markdown-body p,
 .markdown-body li {
-  color: var(--iwp-text-muted);
+  color: var(--iwp-text);
+}
+
+.markdown-body p {
+  margin: 0 0 16px;
+}
+
+.markdown-body a {
+  color: var(--iwp-primary);
 }
 
 .markdown-body strong {
   color: var(--iwp-text);
+  font-weight: 600;
 }
 
 .markdown-body ul,
 .markdown-body ol {
   padding-left: 1.5em;
+  margin: 0 0 16px;
+}
+
+.markdown-body li + li {
+  margin-top: 4px;
 }
 
 .markdown-body blockquote {
-  margin: 0;
+  margin: 0 0 16px;
   padding: 0 1em;
   color: var(--iwp-text-muted);
   border-left: 0.25em solid var(--iwp-border);
@@ -285,16 +345,22 @@ button {
   border-collapse: collapse;
   display: block;
   overflow-x: auto;
+  margin: 0 0 16px;
 }
 
 .markdown-body table th,
 .markdown-body table td {
   border: 1px solid var(--iwp-border);
-  padding: 6px 13px;
+  padding: 8px 13px;
 }
 
 .markdown-body table tr:nth-child(2n) {
   background-color: var(--iwp-surface-muted);
+}
+
+.markdown-body table th {
+  background-color: var(--iwp-surface-muted);
+  font-weight: 600;
 }
 
 .markdown-body hr {
@@ -305,6 +371,7 @@ button {
 
 .markdown-body img {
   max-width: 100%;
+  border-radius: 6px;
 }
 
 .markdown-body .mermaid {
@@ -313,25 +380,27 @@ button {
   overflow-x: auto;
   background: var(--iwp-surface-muted);
   border: 1px solid var(--iwp-border);
-  border-radius: 10px;
+  border-radius: 6px;
   padding: var(--iwp-space-2);
   margin: var(--iwp-space-2) 0;
 }
 
 .markdown-body pre {
-  line-height: 1.75;
+  line-height: 1.45;
   background: var(--iwp-code-bg);
   border: 1px solid var(--iwp-border);
-  border-radius: 10px;
-  padding: var(--iwp-space-2);
+  border-radius: 6px;
+  padding: 16px;
   overflow: auto;
+  margin: 0 0 16px;
 }
 
 .markdown-body code {
   font-family: var(--iwp-mono);
   background: var(--iwp-code-inline-bg);
-  padding: 2px 6px;
-  border-radius: 6px;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 85%;
 }
 
 .markdown-body pre code {

@@ -61,7 +61,7 @@ watch([htmlContent, loading, loadError], () => {
       <!-- @iwp.link pages/docs-reader.md::n.28d7 -->
       <!-- @iwp.link pages/docs-reader.md::n.429a -->
       <p v-else-if="loadError" class="state-message">{{ t("viewport.empty") }}</p>
-      <article v-else class="markdown-body" v-html="htmlContent"></article>
+      <article v-else class="markdown-body markdown-body--docs" v-html="htmlContent"></article>
     </section>
   </main>
 </template>

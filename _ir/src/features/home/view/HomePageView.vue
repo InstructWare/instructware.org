@@ -169,31 +169,33 @@ const vision = computed(() => [t("vision.lead"), t("vision.body"), t("vision.foo
 
 .home-surface {
   background:
-    radial-gradient(140% 140% at 100% 0%, color-mix(in srgb, var(--iwp-primary) 4%, transparent), transparent 72%),
+    radial-gradient(120% 140% at 100% 0%, color-mix(in srgb, var(--iwp-primary) 3%, transparent), transparent 68%),
     var(--iwp-surface);
-  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .home-surface:hover {
-  border-color: color-mix(in srgb, var(--iwp-primary) 35%, var(--iwp-border));
-  transform: translateY(-1px);
-  box-shadow: 0 10px 30px var(--iwp-shadow-soft);
+  border-color: color-mix(in srgb, var(--iwp-primary) 25%, var(--iwp-border));
+  box-shadow: 0 6px 18px var(--iwp-shadow-soft);
 }
 
 .hero {
   position: relative;
-  padding: clamp(24px, 5vw, 48px);
+  padding: clamp(28px, 5vw, 52px);
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.15;
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
   margin: 0 0 var(--iwp-space-2);
 }
 
 .hero-subheadline {
   max-width: 760px;
   margin-bottom: var(--iwp-space-3);
+  color: var(--iwp-text-muted);
+  font-size: 1.02rem;
 }
 
 .hero-actions {
@@ -202,19 +204,23 @@ const vision = computed(() => [t("vision.lead"), t("vision.body"), t("vision.foo
 
 .hero-tooling-link {
   position: absolute;
-  top: 18px;
-  right: 20px;
-  border: 1px solid color-mix(in srgb, var(--iwp-primary) 28%, var(--iwp-border));
+  top: 20px;
+  right: 22px;
+  border: 1px solid var(--iwp-border);
   border-radius: 999px;
   padding: 6px 12px;
-  background: color-mix(in srgb, var(--iwp-primary) 6%, var(--iwp-surface));
-  color: var(--iwp-primary);
+  background: var(--iwp-surface-elevated);
+  color: var(--iwp-text-muted);
   cursor: pointer;
-  font-size: 0.88rem;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 .hero-tooling-link:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: var(--iwp-primary);
+  border-color: color-mix(in srgb, var(--iwp-primary) 28%, var(--iwp-border));
+  background: var(--iwp-surface-muted);
 }
 
 .contrast-card {
@@ -223,6 +229,7 @@ const vision = computed(() => [t("vision.lead"), t("vision.body"), t("vision.foo
 
 .home-section h2 {
   margin: 0 0 var(--iwp-space-2);
+  font-size: 1.5rem;
 }
 
 .laws-grid {
@@ -238,6 +245,8 @@ const vision = computed(() => [t("vision.lead"), t("vision.body"), t("vision.foo
 .law-index {
   color: var(--iwp-primary);
   font-family: var(--iwp-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
   margin-top: 0;
 }
 
@@ -278,7 +287,7 @@ const vision = computed(() => [t("vision.lead"), t("vision.body"), t("vision.foo
 
 :global(.dark) .home-surface {
   background:
-    radial-gradient(140% 140% at 100% 0%, color-mix(in srgb, var(--iwp-primary) 9%, transparent), transparent 74%),
+    radial-gradient(120% 140% at 100% 0%, color-mix(in srgb, var(--iwp-primary) 12%, transparent), transparent 72%),
     var(--iwp-surface);
 }
 
