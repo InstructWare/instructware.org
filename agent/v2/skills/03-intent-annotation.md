@@ -1,6 +1,6 @@
-# Skill v2-02: Intent Annotation Review (`@iwp`)
+# Skill v2-03: Intent Annotation Review (`@iwp`)
 
-Use this skill after Stage 1 only when annotation value is clear.
+Use this skill in aligned loop after Stage 2 behavior is stable and annotation value is clear.
 
 ## Objective
 
@@ -37,6 +37,15 @@ Act as a developer reviewing intent quality for downstream implementation and li
 - when a list contains mixed semantic kinds, annotate each item explicitly
 - use `@no-iwp` on list items that are exceptions under an annotated scope
 
+## Parameter Source Rule
+
+- before writing `@iwp(kind=...)` or `@iwp(file=...,section=...)`, resolve schema source from `.iwp-lint.yaml` first
+- if `schema.file` is a real path, read that file and use it as source of truth
+- if `schema.file: builtin`, read `tools/schema/iwp-schema.v1.json` as workspace mirror for kind/file-section lookup
+- if schema lookup fails, use plain `@iwp` without parameters and record unresolved parameter candidates in handoff note
+- never invent kind/file/section values by guesswork
+- enforce all-or-valid: use plain `@iwp` or fully valid parameterized `@iwp`; do not keep partially or invalidly parameterized forms
+
 ## Priority and Scope Rule
 
 - apply this precedence strictly: item `@no-iwp` > item `@iwp(...)` > list-top token > inherited H2 `@iwp(...)`
@@ -66,10 +75,11 @@ Act as a developer reviewing intent quality for downstream implementation and li
 
 1. Ensure session preflight follows runtime bootstrap guard (`session current` then `session start` only if missing).
 2. Read updated pages and identify runtime-impacting nodes.
-3. Add `@iwp` only to nodes that matter for traceability and implementation.
-4. Add optional parameters only when ambiguity remains without them.
-5. Apply density control and remove low-value annotations before finishing.
-6. Run `session diff` to verify scope and avoid accidental broad edits.
+3. Resolve schema source and lookup valid parameter options before parameterized annotation.
+4. Add `@iwp` only to nodes that matter for traceability and implementation.
+5. Add optional parameters only when ambiguity remains without them.
+6. Apply density control and remove low-value annotations before finishing.
+7. Run `session diff` to verify scope and avoid accidental broad edits.
 
 ## Quality Bar
 
@@ -77,3 +87,4 @@ Act as a developer reviewing intent quality for downstream implementation and li
 - intent readability remains high after annotation
 - no `_ir` files are changed in this stage
 - annotation set is sparse enough to avoid link-dump patterns in Stage 4
+- parameterized annotations are schema-backed, not guessed

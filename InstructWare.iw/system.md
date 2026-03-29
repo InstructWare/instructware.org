@@ -16,6 +16,12 @@ InstructWare.org is the official site for the InstructWare protocol, manifesto, 
 - Docs Center routes users to Manifesto and Protocol reading flows.
 - Docs Reader renders long-form markdown with deterministic navigation and progress state.
 
+## Visual System
+
+- Visual design source of truth is `styles/visual.md`.
+- All pages should use tokenized color and spacing rules from the visual contract.
+- Markdown presentation should remain GitHub-like, readable, and low-noise.
+
 ## Runtime Guarantees
 
 - Intent and implementation changes remain reviewable, testable, and reversible.

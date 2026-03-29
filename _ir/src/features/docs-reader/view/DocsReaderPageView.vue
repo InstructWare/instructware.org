@@ -12,13 +12,13 @@ const {
   htmlContent,
 } = useDocsReader();
 // @iwp.link pages/docs-reader.md::n.0fee
+// @iwp.link pages/docs-reader.md::n.38d6
 // @iwp.link pages/docs-reader.md::n.7cfb
 // @iwp.link pages/docs-reader.md::n.c7e5
 // @iwp.link pages/docs-reader.md::n.d9c4
 const { t, setLocale } = usePageCopy("docs-reader", runtime.value.uiPrefsLocale);
 
 async function renderMermaidDiagrams() {
-  // @iwp.link pages/docs-reader.md::n.aff1
   if (loading.value || loadError.value) {
     return;
   }
@@ -53,9 +53,10 @@ watch([htmlContent, loading, loadError], () => {
 </script>
 
 <template>
-  <!-- @iwp.link pages/docs-reader.md::n.8052 -->
+  <!-- @iwp.link pages/docs-reader.md::n.2ba6 -->
   <AppHeader />
   <main class="container page">
+    <!-- @iwp.link pages/docs-reader.md::n.4d03 -->
     <section class="card markdown-view">
       <p v-if="loading" class="state-message">{{ t("viewport.loading") }}</p>
       <!-- @iwp.link pages/docs-reader.md::n.28d7 -->

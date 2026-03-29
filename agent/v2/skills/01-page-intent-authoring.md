@@ -49,4 +49,4 @@ Act as a product manager:
 - pages are readable and human-maintainable
 - intent is specific enough for coding and testing
 - no executable code is embedded as runtime source
-- unresolved requirement ambiguity is listed explicitly for Stage 3 handoff
+- unresolved requirement ambiguity is listed explicitly for Stage 2 handoff

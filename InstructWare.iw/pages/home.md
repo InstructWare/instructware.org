@@ -67,6 +67,12 @@ Final CTA block must include:
 - one tagline key,
 - three action keys aligned with the hero action semantics.
 
+## Visual Contract
+
+- This page must follow `styles/visual.md` as the visual source of truth. @iwp
+- Hero, contrast cards, laws, values, and final CTA should keep a unified tokenized style language.
+- Decorative effects should remain minimal and must not reduce information clarity.
+
 ## Interaction Intent
 
 Read Manifesto action triggers `open_doc(manifesto)` and navigates to manifesto reading flow. @iwp(file=logic,section=trigger)

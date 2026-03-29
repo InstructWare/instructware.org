@@ -1,4 +1,4 @@
-# Skill v2-03: IR Implementation (Code Quality First)
+# Skill v2-02: IR Implementation (Code Quality First)
 
 Use this skill when intent is accepted for this session.
 
@@ -27,6 +27,16 @@ This stage is implementation-only:
 - if link work is needed beyond exception, stop and defer to Stage 4
 
 ## Procedure
+
+Fast loop:
+
+1. Read changed markdown pages and current `_ir` behavior directly.
+2. Implement behavior in `_ir` with maintainable structure.
+3. Add or update tests for changed behavior.
+4. When user needs rollback-safe savepoint, run:
+   - `<IWP_BUILD_CMD> history checkpoint --config .iwp-lint.yaml --message "fast loop savepoint"`
+
+Aligned loop:
 
 1. Ensure session preflight follows runtime bootstrap guard (`session current` then `session start` only if missing).
 2. Run:

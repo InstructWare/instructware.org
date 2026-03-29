@@ -32,6 +32,7 @@ schema:
 
 authoring:
   node_generation_mode: annotated_only
+  strict_annotation_params: true
 
 execution_presets:
   agent-default:

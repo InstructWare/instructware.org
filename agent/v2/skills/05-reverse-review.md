@@ -1,6 +1,6 @@
 # Skill v2-05: Reverse Review (Intent Match Verification)
 
-Use this skill after Stage 4 link alignment.
+Use this skill after Stage 4 link alignment in aligned loop.
 
 ## Objective
 
@@ -51,6 +51,11 @@ MUST NOT:
    - assess whether link location is meaningfully adjacent
 5. Produce JSON report using `templates/review-report.v1.json` unless project overrides.
    - default output path: `out/review-report.v1.json`
+
+Fast loop note:
+
+- do not run this stage by default in fast mode
+- run only when user explicitly requests reverse review or aligned delivery is required
 
 ## Pass/Fail Rule
 

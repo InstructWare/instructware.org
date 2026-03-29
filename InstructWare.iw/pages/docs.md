@@ -43,6 +43,12 @@ Governance notice block must include:
 - one heading key,
 - two concise policy bullet keys.
 
+## Visual Contract
+
+- This page must follow `styles/visual.md` as the visual source of truth. @iwp
+- Document cards should use consistent tokenized spacing, borders, and typography hierarchy.
+- Governance notice should preserve readability and avoid decorative noise.
+
 ## Interaction Intent
 
 Selecting Manifesto card action triggers `open_doc(manifesto)` and routes to docs reader page. @iwp(file=logic,section=trigger)

@@ -6,7 +6,11 @@ import { useDocsRuntimeStore } from "../../docs-runtime/store";
 import { useDocsCenterActions } from "../composables/useDocsCenterActions";
 
 const { runtime } = useDocsRuntimeStore();
+// @iwp.link pages/docs.md::n.184a
+// @iwp.link pages/docs.md::n.3765
 // @iwp.link pages/docs.md::n.d7ca
+// @iwp.link pages/docs.md::n.e41c
+// @iwp.link pages/docs.md::n.fffe
 const { t, setLocale } = usePageCopy("docs", runtime.value.uiPrefsLocale);
 const { openManifesto, openProtocol } = useDocsCenterActions();
 
@@ -20,19 +24,16 @@ watch(
 </script>
 
 <template>
-  <!-- @iwp.link pages/docs.md::n.dfd9 -->
+  <!-- @iwp.link pages/docs.md::n.a8ec -->
   <AppHeader />
-  <!-- @iwp.link pages/docs.md::n.184a -->
-  <!-- @iwp.link pages/docs.md::n.3765 -->
-  <!-- @iwp.link pages/docs.md::n.e41c -->
   <main class="container page">
-    <!-- @iwp.link pages/docs.md::n.14c0 -->
+    <!-- @iwp.link pages/docs.md::n.0d79 -->
     <section class="card">
       <h1>{{ t("header.title") }}</h1>
       <p class="lead">{{ t("header.subtitle") }}</p>
       <p class="lead">{{ t("header.helper_note") }}</p>
     </section>
-    <!-- @iwp.link pages/docs.md::n.9eb2 -->
+    <!-- @iwp.link pages/docs.md::n.9827 -->
     <section class="cards-grid">
       <article class="card">
         <h2>{{ t("manifesto.title") }}</h2>
@@ -51,7 +52,7 @@ watch(
         </button>
       </article>
     </section>
-    <!-- @iwp.link pages/docs.md::n.29eb -->
+    <!-- @iwp.link pages/docs.md::n.9a10 -->
     <section class="card">
       <h2>{{ t("notice.title") }}</h2>
       <ul class="ordered-list">

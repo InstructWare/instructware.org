@@ -12,6 +12,12 @@ const homeLabel = computed(() => (isZh.value ? "首页" : "Home"));
 const docsLabel = computed(() => (isZh.value ? "文档" : "Docs"));
 const localeGroupLabel = computed(() => (isZh.value ? "选择语言" : "Select locale"));
 const themeToggleLabel = computed(() => (isZh.value ? "切换主题" : "Toggle theme"));
+const themeToggleText = computed(() => {
+  if (isZh.value) {
+    return isDark.value ? "浅色" : "深色";
+  }
+  return isDark.value ? "Light" : "Dark";
+});
 </script>
 
 <template>
@@ -64,7 +70,7 @@ const themeToggleLabel = computed(() => (isZh.value ? "切换主题" : "Toggle t
           type="button"
           @click="toggleTheme"
         >
-          {{ isDark ? "Light" : "Dark" }}
+          {{ themeToggleText }}
         </button>
       </div>
     </div>

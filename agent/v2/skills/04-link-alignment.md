@@ -1,6 +1,6 @@
 # Skill v2-04: Link Alignment (Changed Scope Only)
 
-Use this skill only after Stage 3 implementation is complete.
+Use this skill only after Stage 2 implementation is complete in aligned loop.
 
 ## Objective
 
@@ -55,6 +55,11 @@ Align changed intent nodes and changed code by adding precise, colocated `@iwp.l
    - fallback only when needed: `<IWP_LINT_CMD> links normalize --config .iwp-lint.yaml --write`
 8. Re-run:
    - `<IWP_BUILD_CMD> session reconcile --config .iwp-lint.yaml --preset agent-default`
+
+Fast loop note:
+
+- do not run this stage by default in fast mode
+- enter this stage only when user asks for link alignment or delivery requires aligned gate
 
 ## Minimal Unblock Patch Rule
 

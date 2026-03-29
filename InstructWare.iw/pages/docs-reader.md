@@ -31,6 +31,12 @@ Document viewport block must include:
 - loading state key,
 - empty-state key for unavailable content.
 
+## Visual Contract
+
+- This page must follow `styles/visual.md` as the visual source of truth. @iwp
+- Markdown typography rhythm, code styles, table styles, and blockquote styles must remain tokenized and theme-safe.
+- Reader visuals should prioritize readability over decorative styling.
+
 ## Interaction Intent
 
 Mermaid diagrams in markdown code fences should render as visual diagrams after markdown mount and remain readable under active theme colors. @iwp(file=logic,section=output)

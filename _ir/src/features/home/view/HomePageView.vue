@@ -54,10 +54,10 @@ const vision = computed(() => [t("vision.lead"), t("vision.body"), t("vision.foo
 </script>
 
 <template>
-  <!-- @iwp.link pages/home.md::n.4a7f -->
+  <!-- @iwp.link pages/home.md::n.7c56 -->
   <AppHeader />
   <main class="container page home-page">
-    <!-- @iwp.link pages/home.md::n.3a74 -->
+    <!-- @iwp.link pages/home.md::n.9877 -->
     <section class="card hero home-surface">
       <button class="hero-tooling-link" type="button" @click="openTooling">
         {{ t("hero.link.tooling") }}
@@ -78,7 +78,7 @@ const vision = computed(() => [t("vision.lead"), t("vision.body"), t("vision.foo
       </div>
     </section>
 
-    <!-- @iwp.link pages/home.md::n.9373 -->
+    <!-- @iwp.link pages/home.md::n.ac24 -->
     <section class="home-section">
       <h2>{{ t("contrast.section_title") }}</h2>
       <div class="two-column">
@@ -101,7 +101,7 @@ const vision = computed(() => [t("vision.lead"), t("vision.body"), t("vision.foo
       </div>
     </section>
 
-    <!-- @iwp.link pages/home.md::n.7a6e -->
+    <!-- @iwp.link pages/home.md::n.003d -->
     <section class="home-section">
       <h2>{{ t("laws.section_title") }}</h2>
       <div class="laws-grid">
@@ -112,7 +112,7 @@ const vision = computed(() => [t("vision.lead"), t("vision.body"), t("vision.foo
       </div>
     </section>
 
-    <!-- @iwp.link pages/home.md::n.2543 -->
+    <!-- @iwp.link pages/home.md::n.c7e3 -->
     <section class="card home-surface">
       <h2>{{ t("start.section_title") }}</h2>
       <ol class="ordered-list">
@@ -122,7 +122,7 @@ const vision = computed(() => [t("vision.lead"), t("vision.body"), t("vision.foo
       </ol>
     </section>
 
-    <!-- @iwp.link pages/home.md::n.da38 -->
+    <!-- @iwp.link pages/home.md::n.1294 -->
     <section class="card home-surface values-card">
       <h2>{{ t("values.section_title") }}</h2>
       <ul class="values-list">
@@ -134,7 +134,7 @@ const vision = computed(() => [t("vision.lead"), t("vision.body"), t("vision.foo
       </ul>
     </section>
 
-    <!-- @iwp.link pages/home.md::n.b630 -->
+    <!-- @iwp.link pages/home.md::n.9f0a -->
     <section class="card home-surface">
       <h2>{{ t("vision.section_title") }}</h2>
       <ul>
@@ -144,7 +144,7 @@ const vision = computed(() => [t("vision.lead"), t("vision.body"), t("vision.foo
       </ul>
     </section>
 
-    <!-- @iwp.link pages/home.md::n.672a -->
+    <!-- @iwp.link pages/home.md::n.dc58 -->
     <section class="card home-surface final-cta">
       <h2>{{ t("final_cta.tagline") }}</h2>
       <div class="actions">
@@ -163,6 +163,7 @@ const vision = computed(() => [t("vision.lead"), t("vision.body"), t("vision.foo
 </template>
 
 <style scoped>
+/* @iwp.link pages/home.md::n.82b9 */
 .home-page {
   gap: var(--iwp-space-4);
 }
@@ -225,6 +226,13 @@ const vision = computed(() => [t("vision.lead"), t("vision.body"), t("vision.foo
 
 .contrast-card {
   padding: var(--iwp-space-2);
+}
+
+.contrast-card ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding-left: 1.3rem;
 }
 
 .home-section h2 {
