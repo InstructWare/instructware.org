@@ -4,16 +4,16 @@
 
 - header.title: 文档中心
 - header.subtitle: 选择文档进入专注阅读模式。
-- header.helper_note: 建议先读 Manifesto 理解愿景，再读 Protocol 了解约束细节。
+- header.helper_note: 建议先读 Manifesto，理解我们观察到的软件变化；再读 Protocol，了解 IWP 如何约束意图、代码与运行时之间的关系。
 
 ## Cards
 
 - manifesto.title: Manifesto
-- manifesto.summary: 解释 InstructWare 的动机与核心原则。
+- manifesto.summary: 解释我们为什么认为软件正在改变，以及 InstructWare 提出的核心判断与原则。
 - manifesto.status: 草案
 - manifesto.action_open: 打开 Manifesto
 - protocol.title: IWP Protocol v1
-- protocol.summary: 定义运行时契约、追溯闭环与验证要求。
+- protocol.summary: 说明 IWP 当前如何约束意图、代码与运行时行为之间的关系，使其保持一致、可追溯、可验证。
 - protocol.status: 公共草案
 - protocol.action_open: 打开 Protocol
 

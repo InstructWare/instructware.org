@@ -1,6 +1,6 @@
 # The InstructWare Manifesto
 
-### Beyond Static Software: Toward a Natural-Language-First Computing Paradigm
+### Beyond Static Software: Toward a Computing Paradigm Where Natural Language Becomes the Bridge
 
 Project status: Draft (Pre-Launch)
 
@@ -14,14 +14,16 @@ Over the last four decades, computing has advanced through two major layers:
 
 Even with these advances, most applications are still built as fixed artifacts. Once code is written, compiled, and released, behavior changes slowly and usually only through release cycles.
 
-This model has worked, but it also shifts adaptation cost to people: users learn product logic, product teams prioritize fixed roadmaps, and real-world intent is translated through many layers before software can respond.
+This model still works, but it also shifts more of the adaptation cost onto people: users learn product logic, product teams prioritize fixed roadmaps, and real-world intent has to pass through many layers before software can respond.
 
 **Our tools should adapt to human instruction, not humans to tools.**
 
-Large language models and agentic systems now make this approach practical: intent can be authored in natural language and compiled into executable behavior under policy controls, validation, and traceability.
+Large language models and agentic systems now make that direction practical for the first time. Natural language no longer has to remain outside the system as a requirements description layer; under policy controls, validation, and traceability, it can begin to participate directly in how executable behavior is generated and adjusted.
 
-At the same time, AI-assisted coding has introduced a new failure mode: fragmented prompts produce fragmented systems. Without a structured intent layer, teams accumulate behavior that is difficult to test, explain, and maintain.
-InstructWare uses a protocolized intent layer built around human-readable intent documents (page-first in IWP), with optional semantic annotations to help teams keep this contract explicit and maintainable at scale.
+At the same time, AI-assisted coding has introduced a new failure mode: fragmented prompts produce fragmented systems. Without a structured intent layer, teams do not accumulate stronger software; they accumulate behavior that is harder to test, explain, and maintain.
+InstructWare proposes a protocol-governed intent layer built around human-readable intent documents (page-first in IWP), with optional semantic annotations that help teams keep that contract explicit, stable, and maintainable at scale.
+
+In the AI era, natural language is becoming an important bridge between humans and software systems. It is no longer only a way to describe requirements from the outside, but is starting to participate in how software is defined, evolved, and governed.
 
 > **Instruction:** is the human-provided input; **intent:** is the normalized semantic target derived from instruction and used for planning and execution.
 
@@ -29,15 +31,17 @@ InstructWare uses a protocolized intent layer built around human-readable intent
 
 ## 02. What Is InstructWare?
 
-**InstructWare is a natural-language-first computing paradigm where human intent is authored as structured text and compiled into runtime behavior.**
+**InstructWare is a computing paradigm that treats natural language as a core entry point: human intent is expressed as structured text and compiled into runtime behavior.**
 
-It is not a static application, and it is not just a chatbot interface. It is a runtime system that can:
+It is not a static application, and it is not just a chatbot interface. It is closer to a runtime capability that can:
 - interpret intent,
 - synthesize or update interfaces,
 - generate and orchestrate logic,
 - and evolve behavior under explicit constraints.
 
 In this model, software is less about shipping a single fixed binary and more about operating a governed intent-to-execution runtime.
+
+The point is not simply to let models produce more code. The point is to make natural language a reliable participant in how AI software is defined and iterated, while keeping the system governable and maintainable.
 
 ---
 
@@ -71,12 +75,12 @@ We propose the following priorities for the InstructWare era:
 - **Source-traceable runtime evolution** over opaque one-shot deployments.
 - **Governed machine adaptation to human goals** over humans adapting to machine constraints.
 
-These values do not reject software engineering fundamentals. They re-center them around intent, verification, and long-term maintainability.
-We believe that, in the AI era, natural language is becoming a mainstream programming interface.
+These values do not reject software engineering fundamentals. They try to re-center them around intent, verification, and long-term maintainability.
+We believe that, in the AI era, natural language is becoming one of the more important programming interfaces.
 
 InstructWare treats the intent layer as language-agnostic and the execution layer as implementation-language-agnostic. 
 
-InstructWare's long-term goal is to turn natural-language-first programming into an engineering reality that is governable, verifiable, and continuously evolvable. Traditional languages remain essential and continue to play a key role at the execution layer.
+InstructWare's long-term goal is to turn a natural-language-centered way of building software into an engineering reality that is governable, verifiable, and continuously evolvable. Traditional languages remain essential and continue to play a key role at the execution layer.
 
 ---
 
@@ -84,10 +88,13 @@ InstructWare's long-term goal is to turn natural-language-first programming into
 
 For developers and product teams, InstructWare is not "chat as process." It is a disciplined engineering model for AI-native software.
 
-Prompting is useful for ideation, but prompts alone are not a durable system contract.
+Prompting is useful for exploration, but prompts alone do not create a durable system contract.
 
-Industry solutions such as Spec Kit already move teams toward spec-driven planning and implementation workflows. InstructWare builds on that direction by treating intent artifacts as protocol-governed runtime contracts, with explicit traceability and drift-control rules that can be validated in tooling and CI.
+Industry solutions such as Spec Kit already move teams toward spec-driven planning and implementation workflows. InstructWare extends that direction by treating intent artifacts as protocol-governed runtime contracts, with explicit traceability and drift-control rules that tooling and CI can continuously validate.
+
 In the IWP Core profile, this discipline is operationalized as human-readable, page-first intent authoring, optional `@iwp` semantic annotations, and profile-based verification and drift-control gates.
+
+IWP plays a specific role in that model: it is not the whole of InstructWare, but one of its reliability layers. It keeps natural-language intent aligned with code and runtime behavior, so the evolution loop remains verifiable, traceable, and reviewable instead of collapsing into prompt-driven drift.
 
 In short: InstructWare is not anti-code; it is pro-discipline for teams building with AI at production scale.
 
@@ -107,18 +114,18 @@ InstructWare is not a belief system that asks for trust without evidence. We com
 
 For decades, most people have interacted with software as fixed users of predefined workflows.
 
-InstructWare defines a different role: people become **Instructors** who can define and refine system behavior through natural language, with engineering guardrails.
+InstructWare proposes a different role: people become **Instructors** who can define and refine system behavior through natural language, with engineering guardrails.
 
-InstructWare is not only about software adapting to people. It is also about giving builders a stable contract between intent, implementation, and operations.
+InstructWare is not only about software adapting to people. It also aims to give builders a stable contract between intent, implementation, and operations.
 
-The barrier is lower, but the standard remains: governed, verifiable, source-traceable, and production-maintainable.
+The barrier is lower, but the standard does not move: the system still has to remain governable, verifiable, source-traceable, and maintainable in production.
 
 Less time lost to interface friction.
 More time spent expressing intent.
 More confidence that evolving code still matches declared intent.
 
-For builders, the path is practical and iterative: start from intent docs, run governed update loops, measure results, and improve through open feedback.
+For builders, the path should be practical and iterative: start from intent docs, run governed update loops, measure results, and improve through open feedback.
 
-**Put software back on track to serve humans and the teams who build for them.**
+**Put software back on track to serve both users and the teams who build for them.**
 
-Welcome to the InstructWare era.
+That is what we mean by the InstructWare direction.

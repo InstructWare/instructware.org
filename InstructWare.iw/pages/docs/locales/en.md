@@ -4,16 +4,16 @@
 
 - header.title: Documentation Center
 - header.subtitle: Choose a document to enter focused reading mode.
-- header.helper_note: Start with Manifesto for vision, then Protocol for conformance details.
+- header.helper_note: Start with Manifesto to understand the shift we are observing in software, then read Protocol to see how IWP constrains the relationship between intent, code, and runtime behavior.
 
 ## Cards
 
 - manifesto.title: Manifesto
-- manifesto.summary: Why InstructWare exists and which principles define the paradigm.
+- manifesto.summary: Why we believe software is changing in the AI era, and which principles shape InstructWare's response.
 - manifesto.status: Draft
 - manifesto.action_open: Open Manifesto
 - protocol.title: IWP Protocol v1
-- protocol.summary: Runtime contract, traceability flow, and verification requirements.
+- protocol.summary: How IWP currently constrains the relationship between natural-language intent, code, and runtime behavior so it remains aligned, traceable, and verifiable.
 - protocol.status: Public Draft
 - protocol.action_open: Open Protocol
 

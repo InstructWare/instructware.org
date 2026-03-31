@@ -9,9 +9,9 @@ Display copy is resolved from locale files.
 
 ## Page Purpose
 
-The home page introduces InstructWare as a natural-language-first engineering model and routes visitors to the two core documents: Manifesto and Protocol. @iwp
+The home page introduces InstructWare as a practical response to a visible shift in software: natural language is starting to participate more directly in how AI-era systems are defined, evolved, and governed. @iwp
 
-The page should balance strategic positioning and practical next actions for builders evaluating maintainable AI-native workflows. @iwp
+The page should make clear that InstructWare is a bounded engineering path rather than a universal claim about all software, and that IWP is the reliability layer used to keep intent, code, and runtime behavior aligned. @iwp
 
 ## Page Structure
 
@@ -116,6 +116,7 @@ This page should not embed concrete locale copy directly in body content. @no-iw
 ## Acceptance Criteria
 
 - A maintainer can implement the page layout and interactions without additional product clarification.
+- A first-time visitor can understand the narrative order: software change first, natural-language bridge second, IWP reliability layer third.
 - Locale files can change wording without requiring structural edits in this page.
 - Key interactions and state updates are traceable to runtime behavior boundaries.
 - The document remains concise, reviewable, and page-first.

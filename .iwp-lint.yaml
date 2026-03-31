@@ -1,14 +1,40 @@
 iwp_root: InstructWare.iw
 code_roots:
   - _ir/
-include_ext:
-  - .vue
-  - .py
-  - .ts
-  - .tsx
-  - .js
-  - .jsx
-  - .css
+tracking:
+  protocol:
+    include_ext:
+      - .vue
+      - .py
+      - .ts
+      - .tsx
+      - .js
+      - .jsx
+      - .css
+    exclude_globs:
+      - "**/node_modules/**"
+      - "**/dist/**"
+      - "**/__pycache__/**"
+      - "**/.pytest_cache/**"
+  snapshot:
+    include_ext:
+      - .vue
+      - .py
+      - .ts
+      - .tsx
+      - .js
+      - .jsx
+      - .css
+      - .sh
+      - .yaml
+      - .yml
+      - .json
+      - .toml
+    exclude_globs:
+      - "**/node_modules/**"
+      - "**/dist/**"
+      - "**/__pycache__/**"
+      - "**/.pytest_cache/**"
 
 thresholds:
   node_linked_min: 60

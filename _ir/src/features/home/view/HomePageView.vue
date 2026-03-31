@@ -11,8 +11,6 @@ type ContrastPart = {
 };
 
 const { runtime } = useDocsRuntimeStore();
-// @iwp.link pages/home.md::n.5242
-// @iwp.link pages/home.md::n.b460
 // @iwp.link pages/home.md::n.d898
 const { t, setLocale } = usePageCopy("home", runtime.value.uiPrefsLocale);
 const {
@@ -56,7 +54,9 @@ const vision = computed(() => [t("vision.lead"), t("vision.body"), t("vision.foo
 <template>
   <!-- @iwp.link pages/home.md::n.7c56 -->
   <AppHeader />
+  <!-- @iwp.link pages/home.md::n.f60b -->
   <main class="container page home-page">
+    <!-- @iwp.link pages/home.md::n.fd9a -->
     <!-- @iwp.link pages/home.md::n.9877 -->
     <section class="card hero home-surface">
       <button class="hero-tooling-link" type="button" @click="openTooling">
@@ -197,6 +197,7 @@ const vision = computed(() => [t("vision.lead"), t("vision.body"), t("vision.foo
   margin-bottom: var(--iwp-space-3);
   color: var(--iwp-text-muted);
   font-size: 1.02rem;
+  line-height: 1.7;
 }
 
 .hero-actions {
