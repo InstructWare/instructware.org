@@ -5,8 +5,8 @@
 - hero.eyebrow: InstructWare
 - hero.headline: 当软件进入 AI 时代
 - hero.subheadline: InstructWare 关注一个正在变得现实的问题：当自然语言更深地进入软件系统，如何让系统的定义、演进与治理仍然可靠可控。IWP 是我们当前采用的一条协议化路径，用来让意图、代码与运行时行为之间的关系保持一致，并且可验证、可追溯。
-- hero.action.read_manifesto: 阅读 Manifesto
-- hero.action.read_protocol: 阅读 IWP Protocol
+- hero.action.read_manifesto: 阅读宣言
+- hero.action.read_protocol: 阅读 IWP 草案
 - hero.action.join_feedback: 加入反馈计划
 - hero.link.tooling: 工具链：iwp-tools
 

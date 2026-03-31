@@ -6,7 +6,7 @@
 - hero.headline: As Software Enters the AI Era
 - hero.subheadline: InstructWare starts from a practical question: as natural language moves deeper into software systems, how do we keep definition, evolution, and governance reliable? IWP is the protocol path we currently use to keep the relationship between intent, code, and runtime behavior aligned, verifiable, and traceable.
 - hero.action.read_manifesto: Read Manifesto
-- hero.action.read_protocol: Read IWP Protocol
+- hero.action.read_protocol: Read IWP Draft
 - hero.action.join_feedback: Join Feedback Program
 - hero.link.tooling: Tooling: iwp-tools
 
