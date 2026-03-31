@@ -12,7 +12,7 @@
 
 ## Contrast
 
-- contrast.section_title: From Static Software to More Dynamic Software Systems
+- contrast.section_title: Static Software -> Dynamic Software Systems
 - contrast.legacy.title: Static Software
 - contrast.legacy.point_1: Human intent usually reaches the system only after passing through specs, tickets, and code handoffs.
 - contrast.legacy.point_2: Software changes mainly through release cadence instead of evolving continuously within governance boundaries.

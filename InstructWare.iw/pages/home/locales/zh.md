@@ -12,7 +12,7 @@
 
 ## Contrast
 
-- contrast.section_title: 从静态软件到更动态的软件系统
+- contrast.section_title: 静态软件 -> 动态的软件系统
 - contrast.legacy.title: 静态软件
 - contrast.legacy.point_1: 人类意图通常要经过需求、工单和代码交接层层翻译，才能进入系统。
 - contrast.legacy.point_2: 软件变化主要依赖版本发布，而不是在治理边界内持续演进。
