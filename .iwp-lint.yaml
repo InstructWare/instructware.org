@@ -35,6 +35,7 @@ tracking:
       - "**/dist/**"
       - "**/__pycache__/**"
       - "**/.pytest_cache/**"
+    max_file_size_kb: 5120
 
 thresholds:
   node_linked_min: 60
